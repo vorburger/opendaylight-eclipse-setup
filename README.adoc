@@ -1,0 +1,17 @@
+org.opendaylight.eclipse.setup
+
+TODO Document how one can actually use - once it is end-user ready for initial beta testers.
+
+This goal of this project is to fully automate the way too many manual steps currently described on
+https://wiki.opendaylight.org/view/GettingStarted:_Eclipse in order for anyone to get easily started
+successfully hacking on https://www.opendaylight.org quickly.
+
+This will be implemented used an Eclipse "Oomph" workspace set up model, see http://www.eclipse.org/oomph
+
+This is a protoype which I'm starting on https://github.com/vorburger/opendaylight-eclipse-setup 
+just because it's easier for me to maintain it here for now.  If this becomes used by others,
+I expect we'll move it to https://git.opendaylight.org  
+TODO which repo, new or inside an existing one? 
+
+Michael Vorburger @ work @ Red Hat
+April 2016
