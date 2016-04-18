@@ -70,7 +70,12 @@
       defaultValue="Neon"
       storageURI="scope://Workspace"/>
   <setupTask
-      xsi:type="setup.p2:P2Task"/>
+      xsi:type="setup.p2:P2Task">
+    <requirement
+        name="com.mountainminds.eclemma.feature.feature.group"/>
+    <repository
+        url="http://update.eclemma.org"/>
+  </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.github.eclipse.setup"
