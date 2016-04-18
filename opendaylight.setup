@@ -21,7 +21,19 @@
           key="/instance/org.eclipse.m2e.core/eclipse.m2.autoUpdateProjects">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.egit.ui/commit_dialog_signed_off_by">
+        <value>record</value>
+      </detail>
     </annotation>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.egit.ui">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.egit.ui/commit_dialog_signed_off_by"
+          value="true"/>
+    </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
         name="org.eclipse.m2e.core">
