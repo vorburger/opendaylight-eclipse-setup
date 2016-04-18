@@ -63,6 +63,18 @@
     <description>git clone git.opendaylight.org:29418/odlparent.git</description>
   </setupTask>
   <setupTask
+      xsi:type="setup:CompoundTask"
+      name="User Preferences">
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.m2e.core">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.m2e.core/eclipse.m2.globalSettingsFile"
+          value="${git.clone.opendaylight.odlparent.location}/settings.xml"/>
+    </setupTask>
+  </setupTask>
+  <setupTask
       xsi:type="projects:ProjectsImportTask"
       id="import.nomaven">
     <sourceLocator
