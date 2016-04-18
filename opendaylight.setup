@@ -113,8 +113,14 @@
       xsi:type="setup.p2:P2Task">
     <requirement
         name="com.mountainminds.eclemma.feature.feature.group"/>
+    <requirement
+        name="com.github.sevntu.checkstyle.checks.feature.feature.group"/>
+    <requirement
+        name="net.sf.eclipsecs.feature.group"/>
     <repository
         url="http://update.eclemma.org"/>
+    <repository
+        url="http://eclipse-cs.sf.net/update"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
