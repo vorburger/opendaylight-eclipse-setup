@@ -133,6 +133,8 @@
         name="com.ifedorenko.m2e.sourcelookup.feature.feature.group"/>
     <requirement
         name="io.takari.stats.m2e.feature.feature.group"/>
+    <requirement
+        name="org.sonatype.m2e.buildhelper.feature.feature.group"/>
     <repository
         url="http://update.eclemma.org"/>
     <repository
@@ -145,6 +147,8 @@
         url="http://sourceforge.net/projects/pmd/files/pmd-eclipse/update-site/"/>
     <repository
         url="http://ifedorenko.github.com/m2e-extras/"/>
+    <repository
+        url="https://otto.takari.io/content/sites/m2e.extras/m2eclipse-buildhelper/0.15.0/N/0.15.0.201405280027/"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
