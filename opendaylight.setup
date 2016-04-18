@@ -13,6 +13,21 @@
     name="org.opendaylight"
     label="OpenDaylight">
   <setupTask
+      xsi:type="setup:VariableTask"
+      id=""
+      name="git.user.id"
+      label="Username for Gerrit on git.opendaylight.org">
+    <description>Your Gerrit User ID for git.opendaylight.org (AKA Username as shown on https://git.opendaylight.org/gerrit/#/settings/)</description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:VariableTask"
+      id=""
+      type="PASSWORD"
+      name="opendaylight.password"
+      label="Password for *.opendaylight.org">
+    <description>Password to login to https://git.opendaylight.org/gerrit/ UI (NOT the same as the HTTP Password from https://git.opendaylight.org/gerrit/#/settings/http-password)</description>
+  </setupTask>
+  <setupTask
       xsi:type="setup:CompoundTask"
       name="User Preferences">
     <annotation
@@ -37,7 +52,19 @@
           key="/instance/org.eclipse.wst.xml.core/indentationChar">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.egerrit.core/serversList">
+        <value>record</value>
+      </detail>
     </annotation>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.egerrit.core">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.egerrit.core/serversList"
+          value="[{&quot;fServerURI&quot;:&quot;https://git.opendaylight.org/gerrit&quot;,&quot;fServerScheme&quot;:&quot;https&quot;,&quot;fHostId&quot;:&quot;git.opendaylight.org&quot;,&quot;fServerPath&quot;:&quot;/gerrit&quot;,&quot;fServerName&quot;:&quot;OpenDaylight&quot;,&quot;fServerPort&quot;:-1,&quot;fUserName&quot;:&quot;${git.user.id}&quot;,&quot;fPasswordProvided&quot;:true}]"/>
+    </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
         name="org.eclipse.egit.ui">
@@ -153,13 +180,6 @@
         url="https://otto.takari.io/content/sites/m2e.extras/m2eclipse-buildhelper/0.15.0/N/0.15.0.201405280027/"/>
     <repository
         url="http://download.eclipse.org/egerrit/updates/integration"/>
-  </setupTask>
-  <setupTask
-      xsi:type="setup:VariableTask"
-      id=""
-      name="git.user.id"
-      label="Username for Gerrit on git.opendaylight.org">
-    <description>Your Gerrit User ID for git.opendaylight.org (AKA Username as shown on https://git.opendaylight.org/gerrit/#/settings/)</description>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
