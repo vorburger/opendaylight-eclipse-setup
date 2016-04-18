@@ -127,6 +127,12 @@
         name="edu.umd.cs.findbugs.plugin.eclipse.feature.group"/>
     <requirement
         name="net.sourceforge.pmd.eclipse.feature.group"/>
+    <requirement
+        name="com.ifedorenko.m2e.mavendev.feature.feature.group"/>
+    <requirement
+        name="com.ifedorenko.m2e.sourcelookup.feature.feature.group"/>
+    <requirement
+        name="io.takari.stats.m2e.feature.feature.group"/>
     <repository
         url="http://update.eclemma.org"/>
     <repository
@@ -137,6 +143,8 @@
         url="http://findbugs.cs.umd.edu/eclipse"/>
     <repository
         url="http://sourceforge.net/projects/pmd/files/pmd-eclipse/update-site/"/>
+    <repository
+        url="http://ifedorenko.github.com/m2e-extras/"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
