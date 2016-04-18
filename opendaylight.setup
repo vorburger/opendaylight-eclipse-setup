@@ -5,10 +5,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:git="http://www.eclipse.org/oomph/setup/git/1.0"
     xmlns:jdt="http://www.eclipse.org/oomph/setup/jdt/1.0"
+    xmlns:maven="http://www.eclipse.org/oomph/setup/maven/1.0"
     xmlns:projects="http://www.eclipse.org/oomph/setup/projects/1.0"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
-    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/setup/maven/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Maven.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore"
     name="org.opendaylight"
     label="OpenDaylight">
   <setupTask
@@ -56,9 +57,25 @@
     <description>git clone github.com:vorburger/opendaylight-eclipse-setup</description>
   </setupTask>
   <setupTask
-      xsi:type="projects:ProjectsImportTask">
+      xsi:type="git:GitCloneTask"
+      id="git.clone.opendaylight.odlparent"
+      remoteURI="ssh://${git.user.id}@git.opendaylight.org:29418/odlparent.git">
+    <description>git clone git.opendaylight.org:29418/odlparent.git</description>
+  </setupTask>
+  <setupTask
+      xsi:type="projects:ProjectsImportTask"
+      id="import.nomaven">
     <sourceLocator
         rootFolder="${git.clone.github.eclipse.setup.location}"/>
+  </setupTask>
+  <setupTask
+      xsi:type="maven:MavenImportTask"
+      id="import.maven"
+      projectNameTemplate="[groupId].[artifactId]">
+    <sourceLocator
+        rootFolder="${git.clone.opendaylight.odlparent.location}"
+        locateNestedProjects="true"/>
+    <description></description>
   </setupTask>
   <stream name="master"
       label="Master"/>
