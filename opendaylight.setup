@@ -117,10 +117,26 @@
         name="com.github.sevntu.checkstyle.checks.feature.feature.group"/>
     <requirement
         name="net.sf.eclipsecs.feature.group"/>
+    <requirement
+        name="com.basistech.m2e.code.quality.checkstyle.feature.feature.group"/>
+    <requirement
+        name="com.basistech.m2e.code.quality.findbugs.feature.feature.group"/>
+    <requirement
+        name="com.basistech.m2e.code.quality.pmd.feature.feature.group"/>
+    <requirement
+        name="edu.umd.cs.findbugs.plugin.eclipse.feature.group"/>
+    <requirement
+        name="net.sourceforge.pmd.eclipse.feature.group"/>
     <repository
         url="http://update.eclemma.org"/>
     <repository
         url="http://eclipse-cs.sf.net/update"/>
+    <repository
+        url="http://m2e-code-quality.github.io/m2e-code-quality/site"/>
+    <repository
+        url="http://findbugs.cs.umd.edu/eclipse"/>
+    <repository
+        url="http://sourceforge.net/projects/pmd/files/pmd-eclipse/update-site/"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
