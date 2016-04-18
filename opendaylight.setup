@@ -155,6 +155,13 @@
         url="http://download.eclipse.org/egerrit/updates/integration"/>
   </setupTask>
   <setupTask
+      xsi:type="setup:VariableTask"
+      id=""
+      name="git.user.id"
+      label="Username for Gerrit on git.opendaylight.org">
+    <description>Your Gerrit User ID for git.opendaylight.org (AKA Username as shown on https://git.opendaylight.org/gerrit/#/settings/)</description>
+  </setupTask>
+  <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.github.eclipse.setup"
       remoteURI="git@github.com:vorburger/opendaylight-eclipse-setup.git"
