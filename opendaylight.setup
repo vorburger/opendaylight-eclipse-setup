@@ -58,6 +58,10 @@
           key="/instance/org.eclipse.egerrit.core/serversList">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.m2e.core/eclipse.m2.WorkspacelifecycleMappingsLocation">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -86,6 +90,10 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.m2e.core/eclipse.m2.globalSettingsFile"
           value="${git.clone.opendaylight.odlparent.location}/settings.xml"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.m2e.core/eclipse.m2.WorkspacelifecycleMappingsLocation"
+          value="${workspace.location|uri}/.metadata/.plugins/org.eclipse.m2e.core/lifecycle-mapping-metadata.xml"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -132,6 +140,13 @@
       targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml"
       encoding="UTF-8">
     <description>Initialize JDT's package explorer to show working sets as its root objects</description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:ResourceCreationTask"
+      content="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;lifecycleMappingMetadata>&#xA;  &lt;pluginExecutions>&#xA;    &lt;pluginExecution>&#xA;      &lt;pluginExecutionFilter>&#xA;        &lt;groupId>org.apache.maven.plugins&lt;/groupId>&#xA;        &lt;artifactId>maven-dependency-plugin&lt;/artifactId>&#xA;        &lt;versionRange>2.10&lt;/versionRange>&#xA;        &lt;goals>&#xA;          &lt;goal>unpack&lt;/goal>&#xA;        &lt;/goals>&#xA;      &lt;/pluginExecutionFilter>&#xA;      &lt;action>&#xA;        &lt;ignore />&#xA;      &lt;/action>&#xA;    &lt;/pluginExecution>&#xA;  &lt;/pluginExecutions>&#xA;&lt;/lifecycleMappingMetadata>"
+      targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.m2e.core/lifecycle-mapping-metadata.xml"
+      encoding="UTF-8">
+    <description>Initialize M2E's Maven Lifecycle Mappings, see https://www.eclipse.org/m2e/documentation/m2e-execution-not-covered.html &amp; https://wiki.eclipse.org/M2E_compatible_maven_plugins</description>
   </setupTask>
   <setupTask
       xsi:type="setup:VariableTask"
