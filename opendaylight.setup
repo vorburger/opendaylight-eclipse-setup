@@ -93,7 +93,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.m2e.core/eclipse.m2.WorkspacelifecycleMappingsLocation"
-          value="${workspace.location|uri}/.metadata/.plugins/org.eclipse.m2e.core/lifecycle-mapping-metadata.xml"/>
+          value="${workspace.location}/.metadata/.plugins/org.eclipse.m2e.core/lifecycle-mapping-metadata.xml"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
