@@ -22,19 +22,23 @@
     </detail>
   </annotation>
   <setupTask
-      xsi:type="setup:VariableTask"
-      id=""
-      name="git.user.id"
-      label="Username for Gerrit on git.opendaylight.org">
-    <description>Your Gerrit User ID for git.opendaylight.org (AKA Username as shown on https://git.opendaylight.org/gerrit/#/settings/)</description>
-  </setupTask>
-  <setupTask
-      xsi:type="setup:VariableTask"
-      id=""
-      type="PASSWORD"
-      name="opendaylight.password"
-      label="Password for *.opendaylight.org">
-    <description>Password to login to https://git.opendaylight.org/gerrit/ UI (NOT the same as the HTTP Password from https://git.opendaylight.org/gerrit/#/settings/http-password)</description>
+      xsi:type="setup:CompoundTask"
+      name="Global Variables">
+    <setupTask
+        xsi:type="setup:VariableTask"
+        id=""
+        name="git.user.id"
+        label="Username for Gerrit on git.opendaylight.org">
+      <description>Your Gerrit User ID for git.opendaylight.org (AKA Username as shown on https://git.opendaylight.org/gerrit/#/settings/)</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:VariableTask"
+        id=""
+        type="PASSWORD"
+        name="opendaylight.password"
+        label="Password for *.opendaylight.org">
+      <description>Password to login to https://git.opendaylight.org/gerrit/ UI (NOT the same as the HTTP Password from https://git.opendaylight.org/gerrit/#/settings/http-password)</description>
+    </setupTask>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
@@ -243,10 +247,9 @@
           project="org.opendaylight.odlparent.odlparent"/>
     </workingSet>
   </setupTask>
+  <description>OpenDaylight is leading the transformation to Open Software Defined Networking (SDN). This catalog lists all projects at opendaylight.org that provide automated Eclipse workspace setup support.</description>
   <stream name="master"
       label="Master"/>
   <logicalProjectContainer
-      xsi:type="setup:ProjectCatalog"
       href="index:/org.eclipse.setup#//@projectCatalogs[name='org.opendaylight']"/>
-  <description>OpenDaylight is leading the transformation to Open Software Defined Networking (SDN). This catalog lists all projects at opendaylight.org that provide automated Eclipse workspace setup support.</description>
 </setup:ProjectCatalog>
