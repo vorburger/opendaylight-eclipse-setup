@@ -247,9 +247,6 @@
           project="org.opendaylight.odlparent.odlparent"/>
     </workingSet>
   </setupTask>
+  <project href="projects/vpnservice.setup#/"/>
   <description>OpenDaylight is leading the transformation to Open Software Defined Networking (SDN). This catalog lists all projects at opendaylight.org that provide automated Eclipse workspace setup support.</description>
-  <stream name="master"
-      label="Master"/>
-  <logicalProjectContainer
-      href="index:/org.eclipse.setup#//@projectCatalogs[name='org.opendaylight']"/>
 </setup:ProjectCatalog>
