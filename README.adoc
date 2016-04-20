@@ -1,12 +1,21 @@
-org.opendaylight.eclipse.setup
+=== org.opendaylight.eclipse.setup
 
-TODO Document how one can actually use - once it is end-user ready for initial beta testers.
+_TODO get a proposed gerrit into eclipse.org so that one can actually use it like this (once it is end-user ready for initial beta testers):_
 
-This goal of this project is to fully automate the way too many manual steps currently described on
-https://wiki.opendaylight.org/view/GettingStarted:_Eclipse in order for anyone to get easily started
+OpenDaylight has Oomph, and you can set up an Eclipse development workspace for its projects of it in one click by:
+
+1. Downloading the Eclipse Installer from https://www.eclipse.org/downloads/ and starting it.
+2. On the initial page, click on the *Switch to advanced mode* button in the top right.
+3. On the *Product* page, select *Eclipse IDE for Java Developers*.
+4. On the *Projects* page, collapse the *Eclipse Projects* to scroll down to the *OpenDaylight Projects* and double-click those of interest to you.
+5. Choose your preferred installation settings on the *Variables* page.
+6. Finish the wizard and watch how your development environment is being assembled, courtesy of Oomph.
+
+This project fully automates the way too many manual steps currently described on
+https://wiki.opendaylight.org/view/GettingStarted:_Eclipse, in order for anyone to get easily started
 successfully hacking on https://www.opendaylight.org quickly.
 
-This will be implemented used an Eclipse "Oomph" workspace set up model, see http://www.eclipse.org/oomph
+This is implemented used an Eclipse "Oomph" workspace set up model, see http://www.eclipse.org/oomph
 
 This is a protoype which I'm starting on https://github.com/vorburger/opendaylight-eclipse-setup 
 just because it's easier for me to maintain it here for now.  If this becomes used by others,
