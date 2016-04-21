@@ -26,14 +26,12 @@
       name="Global Variables">
     <setupTask
         xsi:type="setup:VariableTask"
-        id=""
         name="git.user.id"
         label="Username for Gerrit on git.opendaylight.org">
       <description>Your Gerrit User ID for git.opendaylight.org (AKA Username as shown on https://git.opendaylight.org/gerrit/#/settings/)</description>
     </setupTask>
     <setupTask
         xsi:type="setup:VariableTask"
-        id=""
         type="PASSWORD"
         name="opendaylight.password"
         label="Password for *.opendaylight.org">
@@ -125,7 +123,6 @@
   </setupTask>
   <setupTask
       xsi:type="jdt:JRETask"
-      id=""
       version="JavaSE-1.7"
       location="${jre.location-1.7}">
     <description>Define the JRE needed to compile and run the Java projects of ${scope.project.label}</description>
