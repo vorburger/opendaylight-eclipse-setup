@@ -11,7 +11,9 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.vpnservice"
-      remoteURI="ssh://${git.user.id}@git.opendaylight.org:29418/vpnservice.git"/>
+      remoteURI="ssh://${git.user.id}@git.opendaylight.org:29418/vpnservice.git">
+    <description>git clone git.opendaylight.org:29418/vpnservice</description>
+  </setupTask>
   <setupTask
       xsi:type="maven:MavenImportTask"
       id="import.maven"

@@ -218,7 +218,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.odlparent"
       remoteURI="ssh://${git.user.id}@git.opendaylight.org:29418/odlparent.git">
-    <description>git clone git.opendaylight.org:29418/odlparent.git</description>
+    <description>git clone git.opendaylight.org:29418/odlparent</description>
   </setupTask>
   <setupTask
       xsi:type="projects:ProjectsImportTask"
