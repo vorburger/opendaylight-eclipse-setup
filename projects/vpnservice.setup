@@ -13,9 +13,10 @@
       id="git.clone.opendaylight.vpnservice"
       remoteURI="ssh://${git.user.id}@git.opendaylight.org:29418/vpnservice.git"/>
   <setupTask
-      xsi:type="maven:MavenImportTask" id="import.maven"
+      xsi:type="maven:MavenImportTask"
+      id="import.maven"
       projectNameTemplate="[groupId].[artifactId]">
-      <sourceLocator
+    <sourceLocator
         rootFolder="${git.clone.opendaylight.vpnservice.location}"
         locateNestedProjects="true"/>
   </setupTask>
