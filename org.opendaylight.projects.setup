@@ -227,24 +227,6 @@
         rootFolder="${git.clone.github.eclipse.setup.location}"/>
   </setupTask>
   <setupTask
-      xsi:type="maven:MavenImportTask"
-      id="import.maven"
-      projectNameTemplate="[groupId].[artifactId]">
-    <sourceLocator
-        rootFolder="${git.clone.opendaylight.odlparent.location}"
-        locateNestedProjects="true"/>
-    <description></description>
-  </setupTask>
-  <setupTask
-      xsi:type="setup.workingsets:WorkingSetTask">
-    <workingSet
-        name="odlparent">
-      <predicate
-          xsi:type="predicates:RepositoryPredicate"
-          project="org.opendaylight.odlparent.odlparent"/>
-    </workingSet>
-  </setupTask>
-  <setupTask
       xsi:type="setup:WorkspaceTask"
       id="workspace"/>
   <setupTask
@@ -259,6 +241,7 @@
       <substitution>${workspace.location|path}</substitution>
     </modification>
   </setupTask>  
+  <project href="projects/odlparent.setup#/"/>
   <project href="projects/vpnservice.setup#/"/>
   <description>OpenDaylight is leading the transformation to Open Software Defined Networking (SDN). This catalog lists all projects at opendaylight.org that provide automated Eclipse workspace setup support.</description>
 </setup:ProjectCatalog>
