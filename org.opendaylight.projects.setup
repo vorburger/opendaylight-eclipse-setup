@@ -30,7 +30,7 @@
     <setupTask
         xsi:type="setup:VariableTask"
         type="PASSWORD"
-        name="opendaylight.password"
+        name="opendaylight.user.password"
         label="Password for *.opendaylight.org">
       <description>Password to login to https://git.opendaylight.org/gerrit/ UI (NOT the same as the HTTP Password from https://git.opendaylight.org/gerrit/#/settings/http-password)</description>
     </setupTask>
