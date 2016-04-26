@@ -2,7 +2,7 @@
 
 _TODO get a proposed gerrit into eclipse.org so that one can actually use it like this (once it is end-user ready for initial beta testers):_
 
-OpenDaylight has Oomph, and you can set up an Eclipse development workspace for its projects of it in one click by:
+OpenDaylight has Oomph, and you can set up an Eclipse-based development workspace for OpenDaylight projects by:
 
 1. Downloading the Eclipse Installer from https://www.eclipse.org/downloads/ and starting it.
 2. On the initial page, click on the *Switch to advanced mode* button in the top right.
@@ -16,6 +16,12 @@ https://wiki.opendaylight.org/view/GettingStarted:_Eclipse, in order for anyone 
 successfully hacking on https://www.opendaylight.org quickly.
 
 This is implemented used an Eclipse "Oomph" workspace set up model, see http://www.eclipse.org/oomph
+
+By default, it will git clone the repos of all projects you clicked into your new ${installation.location/git}.
+If you already have OpenDaylight projects git clone, then on the "Variables" step of the Eclipse Installer,
+just click [X] Show all variables, and replace the "Git clone location:" variable which defaults to
+"${installation.location/git/}${@id.remoteURI|gitRepository}" by something like 
+"/absolute/path/where/you/keep/your/opendaylight/clones/${@id.remoteURI|gitRepository}".
 
 This is a protoype which I'm starting on https://github.com/vorburger/opendaylight-eclipse-setup 
 just because it's easier for me to maintain it here for now.  If this becomes used by others,
