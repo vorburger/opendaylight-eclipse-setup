@@ -29,8 +29,8 @@
     <workingSet
         name="odlparent">
       <predicate
-          xsi:type="predicates:RepositoryPredicate"
-          project="org.opendaylight.odlparent.odlparent"/>
+          xsi:type="predicates:LocationPredicate"
+          pattern="${git.clone.opendaylight.odlparent.location}.*"/>
     </workingSet>
   </setupTask>
   <stream name="master"/>
