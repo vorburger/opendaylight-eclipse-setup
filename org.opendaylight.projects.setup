@@ -68,6 +68,10 @@
           key="/instance/org.eclipse.m2e.core/eclipse.m2.WorkspacelifecycleMappingsLocation">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.ui.ide/SAVE_ALL_BEFORE_BUILD">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -103,6 +107,22 @@
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
+        name="org.eclipse.ui">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui/defaultPerspectiveId"
+          value="org.eclipse.jdt.ui.JavaPerspective"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.ui.ide">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.ide/SAVE_ALL_BEFORE_BUILD"
+          value="true"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
         name="org.eclipse.wst.xml.core">
       <setupTask
           xsi:type="setup:PreferenceTask"
@@ -116,14 +136,6 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.wst.xml.core/indentationSize"
           value="2"/>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="org.eclipse.ui">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.ui/defaultPerspectiveId"
-          value="org.eclipse.jdt.ui.JavaPerspective"/>
     </setupTask>
   </setupTask>
   <setupTask
