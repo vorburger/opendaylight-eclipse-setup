@@ -1,0 +1,6 @@
+# When adding projects here, remember to also add a project href to org.opendaylight.projects.setup, and run ProjectsSetupGenerator.xtend
+
+odlparent
+lispflowmapping
+vpnservice 
+yangtools
