@@ -258,7 +258,60 @@
       <substitution>${workspace.location|path}</substitution>
     </modification>
   </setupTask>
+  <project href="projects/aaa.setup#/"/>
+  <project href="projects/alto.setup#/"/>
+  <project href="projects/atrium.setup#/"/>
+  <project href="projects/bgpcep.setup#/"/>
+  <project href="projects/capwap.setup#/"/>
+  <project href="projects/cardinal.setup#/"/>
+  <project href="projects/centinel.setup#/"/>
+  <project href="projects/controller.setup#/"/>
+  <project href="projects/didm.setup#/"/>
+  <project href="projects/dlux.setup#/"/>
+  <project href="projects/docs.setup#/"/>
+  <project href="projects/faas.setup#/"/>
+  <project href="projects/genius.setup#/"/>
+  <project href="projects/groupbasedpolicy.setup#/"/>
+  <project href="projects/integration.setup#/"/>
+  <project href="projects/iotdm.setup#/"/>
+  <project href="projects/l2switch.setup#/"/>
+  <project href="projects/lacp.setup#/"/>
+  <project href="projects/lispflowmapping.setup#/"/>
+  <project href="projects/mdsal.setup#/"/>
+  <project href="projects/natapp.setup#/"/>
+  <project href="projects/nemo.setup#/"/>
+  <project href="projects/netconf.setup#/"/>
+  <project href="projects/netide.setup#/"/>
+  <project href="projects/netvirt.setup#/"/>
+  <project href="projects/neutron.setup#/"/>
+  <project href="projects/next.setup#/"/>
+  <project href="projects/nic.setup#/"/>
+  <project href="projects/ocpplugin.setup#/"/>
   <project href="projects/odlparent.setup#/"/>
+  <project href="projects/of-config.setup#/"/>
+  <project href="projects/ofextensions.setup#/"/>
+  <project href="projects/openflowjava.setup#/"/>
+  <project href="projects/openflowplugin.setup#/"/>
+  <project href="projects/ovsdb.setup#/"/>
+  <project href="projects/packetcable.setup#/"/>
+  <project href="projects/sdninterfaceapp.setup#/"/>
+  <project href="projects/sfc.setup#/"/>
+  <project href="projects/snbi.setup#/"/>
+  <project href="projects/snmp.setup#/"/>
+  <project href="projects/snmp4sdn.setup#/"/>
+  <project href="projects/src.setup#/"/>
+  <project href="projects/sxp.setup#/"/>
+  <project href="projects/tcpmd5.setup#/"/>
+  <project href="projects/topoprocessing.setup#/"/>
+  <project href="projects/tsdr.setup#/"/>
+  <project href="projects/ttp.setup#/"/>
+  <project href="projects/unimgr.setup#/"/>
+  <project href="projects/usc.setup#/"/>
+  <project href="projects/usecplugin.setup#/"/>
   <project href="projects/vpnservice.setup#/"/>
+  <project href="projects/vtn.setup#/"/>
+  <project href="projects/yangide.setup#/"/>
+  <project href="projects/yang-push.setup#/"/>
+  <project href="projects/yangtools.setup#/"/>
   <description>OpenDaylight is leading the transformation to Open Software Defined Networking (SDN). This catalog lists all projects at opendaylight.org that provide automated Eclipse workspace setup support.</description>
 </setup:ProjectCatalog>

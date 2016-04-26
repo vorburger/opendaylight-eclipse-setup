@@ -59,7 +59,8 @@ class ProjectsSetupGenerator {
         for (line : Files.readLines(projectsListFile, Charsets.UTF_8)) {
             val trimline = line.trim()
             if (!trimline.startsWith(("#")) && trimline.length > 0) {
-               writeProjectSetup(trimline) 
+               writeProjectSetup(trimline)
+               println('''  <project href="projects/«trimline».setup#/"/>''')
             }
         }
     } 
