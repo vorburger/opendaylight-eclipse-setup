@@ -201,6 +201,9 @@
         name="org.sonatype.m2e.buildhelper.feature.feature.group"/>
     <requirement
         name="org.eclipse.egerrit.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.xtend.ide"
+        versionRange="[2.9.0,2.10.0)"/>
     <repository
         url="http://update.eclemma.org"/>
     <repository
@@ -217,6 +220,8 @@
         url="https://otto.takari.io/content/sites/m2e.extras/m2eclipse-buildhelper/0.15.0/N/0.15.0.201405280027/"/>
     <repository
         url="http://download.eclipse.org/egerrit/updates/integration"/>
+    <repository
+        url="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
