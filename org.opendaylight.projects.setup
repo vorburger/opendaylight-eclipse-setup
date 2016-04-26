@@ -23,8 +23,8 @@
       name="Global Variables">
     <setupTask
         xsi:type="setup:VariableTask"
-        name="git.user.id"
-        label="Username for Gerrit on git.opendaylight.org">
+        name="opendaylight.user.id"
+        label="Username on *.opendaylight.org, for Git/Gerrit et al.">
       <description>Your Gerrit User ID for git.opendaylight.org (AKA Username as shown on https://git.opendaylight.org/gerrit/#/settings/)</description>
     </setupTask>
     <setupTask
@@ -91,7 +91,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.egerrit.core/serversList"
-          value="[{&quot;fServerURI&quot;:&quot;https://git.opendaylight.org/gerrit&quot;,&quot;fServerScheme&quot;:&quot;https&quot;,&quot;fHostId&quot;:&quot;git.opendaylight.org&quot;,&quot;fServerPath&quot;:&quot;/gerrit&quot;,&quot;fServerName&quot;:&quot;OpenDaylight&quot;,&quot;fServerPort&quot;:-1,&quot;fUserName&quot;:&quot;${git.user.id}&quot;,&quot;fPasswordProvided&quot;:true}]"/>
+          value="[{&quot;fServerURI&quot;:&quot;https://git.opendaylight.org/gerrit&quot;,&quot;fServerScheme&quot;:&quot;https&quot;,&quot;fHostId&quot;:&quot;git.opendaylight.org&quot;,&quot;fServerPath&quot;:&quot;/gerrit&quot;,&quot;fServerName&quot;:&quot;OpenDaylight&quot;,&quot;fServerPort&quot;:-1,&quot;fUserName&quot;:&quot;${opendaylight.user.id}&quot;,&quot;fPasswordProvided&quot;:true}]"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -263,7 +263,7 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.odlparent"
-      remoteURI="ssh://${git.user.id}@git.opendaylight.org:29418/odlparent.git">
+      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/odlparent.git">
     <description>git clone git.opendaylight.org:29418/odlparent</description>
   </setupTask>
   <setupTask

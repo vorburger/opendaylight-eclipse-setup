@@ -14,7 +14,7 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.openflowplugin"
-      remoteURI="ssh://${git.user.id}@git.opendaylight.org:29418/openflowplugin.git">
+      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/openflowplugin.git">
     <description>git clone git.opendaylight.org:29418/openflowplugin</description>
   </setupTask>
   <setupTask
