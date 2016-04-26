@@ -23,6 +23,9 @@ just click [X] Show all variables, and replace the "Git clone location:" variabl
 "${installation.location/git/}${@id.remoteURI|gitRepository}" by something like 
 "/absolute/path/where/you/keep/your/opendaylight/clones/${@id.remoteURI|gitRepository}".
 
+To import more projects after completing the wizard, click on the "Perform Setup Tasks" yellow/blue circle arrows
+kind of icon in the Toolbar, next to the little blue man icon, and choose "Import Projects..." 
+
 This is a protoype which I'm starting on https://github.com/vorburger/opendaylight-eclipse-setup 
 just because it's easier for me to maintain it here for now.  If this becomes used by others,
 I expect we'll move it to https://git.opendaylight.org  
