@@ -134,6 +134,11 @@
   </setupTask>
   <setupTask
       xsi:type="setup:EclipseIniTask"
+      option="-Doomph.redirection.opendaylight"
+      value="=https://raw.githubusercontent.com/vorburger/opendaylight-eclipse-setup/master/->${git.clone.github.eclipse.setup.location|uri}/"
+      vm="true"/>
+  <setupTask
+      xsi:type="setup:EclipseIniTask"
       option="-Xmx"
       value="2048m"
       vm="true">
@@ -241,7 +246,8 @@
       xsi:type="projects:ProjectsImportTask"
       id="import.nomaven">
     <sourceLocator
-        rootFolder="${git.clone.github.eclipse.setup.location}"/>
+        rootFolder="${git.clone.github.eclipse.setup.location}"
+        locateNestedProjects="true"/>
   </setupTask>
   <setupTask
       xsi:type="setup:WorkspaceTask"
