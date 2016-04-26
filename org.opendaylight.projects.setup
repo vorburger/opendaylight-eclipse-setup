@@ -72,7 +72,19 @@
           key="/instance/org.eclipse.ui.ide/SAVE_ALL_BEFORE_BUILD">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.compare/org.eclipse.compare.IgnoreWhitespace">
+        <value>record</value>
+      </detail>
     </annotation>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.compare">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.compare/org.eclipse.compare.IgnoreWhitespace"
+          value="true"/>
+    </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
         name="org.eclipse.egerrit.core">
