@@ -404,6 +404,12 @@
         versionRange="[2.9.0,2.10.0)"/>
     <requirement
         name="org.sonatype.tycho.m2e.feature.feature.group"/>
+    <requirement
+        name="org.infinitest.eclipse.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.linuxtools.docker.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.linuxtools.vagrant.feature.feature.group"/>
     <repository
         url="http://update.eclemma.org"/>
     <repository
@@ -424,6 +430,10 @@
         url="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
     <repository
         url="http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.9.0/N/LATEST/"/>
+    <repository
+        url="https://infinitest.github.io"/>
+    <repository
+        url="http://download.eclipse.org/linuxtools/updates-docker-nightly/"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
