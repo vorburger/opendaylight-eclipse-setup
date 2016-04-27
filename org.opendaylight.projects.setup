@@ -35,6 +35,10 @@
         label="Password for *.opendaylight.org">
       <description>Password to login to https://git.opendaylight.org/gerrit/ UI (NOT the same as the HTTP Password from https://git.opendaylight.org/gerrit/#/settings/http-password)</description>
     </setupTask>
+    <setupTask
+        xsi:type="setup:VariableTask"
+        name="opendaylight.gerrit.uri.pattern"
+        value="(https|ssh)://([^@/]+@)?(git.opendaylight.org:29418/.*|git.opendaylight.org/gerrit/.*)"/>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
