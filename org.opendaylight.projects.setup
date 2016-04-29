@@ -327,11 +327,6 @@
   </setupTask>
   <setupTask
       xsi:type="setup:EclipseIniTask"
-      option="-Doomph.redirection.opendaylight"
-      value="=https://raw.githubusercontent.com/vorburger/opendaylight-eclipse-setup/master/->${git.clone.github.eclipse.setup.location|uri}/"
-      vm="true"/>
-  <setupTask
-      xsi:type="setup:EclipseIniTask"
       option="-Xmx"
       value="2048m"
       vm="true">
@@ -437,24 +432,9 @@
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
-      id="git.clone.github.eclipse.setup"
-      remoteURI="git@github.com:vorburger/opendaylight-eclipse-setup.git"
-      pushURI=""
-      checkoutBranch="master">
-    <description>git clone github.com:vorburger/opendaylight-eclipse-setup</description>
-  </setupTask>
-  <setupTask
-      xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.odlparent"
       remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/odlparent.git">
     <description>git clone git.opendaylight.org:29418/odlparent</description>
-  </setupTask>
-  <setupTask
-      xsi:type="projects:ProjectsImportTask"
-      id="import.nomaven">
-    <sourceLocator
-        rootFolder="${git.clone.github.eclipse.setup.location}"
-        locateNestedProjects="true"/>
   </setupTask>
   <setupTask
       xsi:type="setup:WorkspaceTask"
@@ -487,6 +467,7 @@
   <project href="projects/didm.setup#/"/>
   <project href="projects/dlux.setup#/"/>
   <project href="projects/docs.setup#/"/>
+  <project href="org.opendaylight.eclipse.setup.setup#/"/>
   <project href="projects/faas.setup#/"/>
   <project href="projects/genius.setup#/"/>
   <project href="projects/groupbasedpolicy.setup#/"/>
