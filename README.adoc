@@ -1,7 +1,5 @@
 === org.opendaylight.eclipse.setup
 
-_TODO get a proposed gerrit into eclipse.org so that one can actually use it like this (once it is end-user ready for initial beta testers):_
-
 OpenDaylight has Oomph, and you can set up an Eclipse-based development workspace for OpenDaylight projects by:
 
 1. Downloading the Eclipse Installer from https://www.eclipse.org/downloads/ and starting it.
@@ -13,7 +11,7 @@ OpenDaylight has Oomph, and you can set up an Eclipse-based development workspac
 
 This project fully automates the way too many manual steps currently described on
 https://wiki.opendaylight.org/view/GettingStarted:_Eclipse, in order for anyone to get easily started
-successfully hacking on https://www.opendaylight.org quickly.
+successfully hacking on https://www.opendaylight.org quickly, without having any red problem markers.
 
 This is implemented used an Eclipse "Oomph" workspace set up model, see http://www.eclipse.org/oomph
 
@@ -26,13 +24,68 @@ just click [X] Show all variables, and replace the "Git clone location:" variabl
 To import more projects after completing the wizard, click on the "Perform Setup Tasks" yellow/blue circle arrows
 kind of icon in the Toolbar, next to the little blue man icon, and choose "Import Projects..." 
 
-This is a protoype which I'm starting on https://github.com/vorburger/opendaylight-eclipse-setup 
-just because it's easier for me to maintain it here for now.  If this becomes used by others,
-I expect we'll move it to https://git.opendaylight.org  
+This work was started on https://github.com/vorburger/opendaylight-eclipse-setup 
+just because it's easier for me to maintain it here for now.  As other ODL developers use this,
+perhaps we'll move it to https://git.opendaylight.org.  
 TODO which repo, new or inside an existing one? 
 
 Michael Vorburger @ work @ Red Hat
 April 2016
+
+==== What exactly this actually does
+
+Provision an Eclipse installation which includes:
+* a few required and useful customizations of the eclipse.ini (notably -Xmx)
+* some custom Preferences, including: Organize Import, Auto Save actions, Java & XML Formatter, EGit Signed off, etc.
+* pre-installing the appropriate versions of the following useful Eclipse plugins:
+** https://www.eclipse.org/xtend/
+** https://wiki.eclipse.org/Linux_Tools_Project/Docker_Tooling/User_Guide
+** https://wiki.eclipse.org/Linux_Tools_Project/Vagrant_Tooling/User_Guide
+** http://eclipse-cs.sourceforge.net
+** http://findbugs.sourceforge.net
+** https://pmd.github.io
+** http://eclemma.org
+** https://www.eclipse.org/egerrit/
+** https://infinitest.github.io/
+
+In particular the M2Eclipse (M2) Maven Eclipse integration PITA is correctly configured with:
+* settings.xml for nexus.opendaylight.org
+* an appropriate lifecycle-mapping-metadata.xml for M2E
+* all required M2E connector plugins (buildhelper, m2e-code-quality, mavendev, tycho)
+* M2E Auto Update preference
+
+Then for each of the available ~80+ ODL repos you wish to import via the Wizard UI it does:
+* git clone
+* EGit Gerrit configuration
+* Import Maven Projects
+* Working Set
+
+Specific setup actions required by particular projects:
+* yangide: PDE Target Platform
+* eclipse-setup: Oomph redirect to be able to work on the live *.setup in workspace 
+
+
+==== Known open issues causing red in opendaylight Eclipse workspace
+
+Until the Gerrits listed below get merged, you can locally work around these problems by pulling the listed Gerrit changes into your workspace.  You do not need to mvn install, because M2E "workspace resolution" will make the changes immediately effective.
+
+===== Cross projects, affecting all
+
+* https://git.opendaylight.org/gerrit/#/c/37792/ causing org.apache.maven.plugin.MojoExecutionException: Artifact has not been packaged yet. When used on reactor artifact, unpack should be executed after packaging: see MDEP-98. (org.apache.maven.plugins:maven-dependency-plugin:2.10:unpack:unpack-license:generate-resources)
+* YANG code generation still requires manual mvn install after first git clone.  This will be fixed once the yangide plugin which auto-generates YANG code will be bundled by this setup model; pending https://bugs.opendaylight.org/show_bug.cgi?id=5798 & https://git.opendaylight.org/gerrit/#/c/38169/.
+
+===== vpnservice
+
+* https://git.opendaylight.org/gerrit/#/c/38059/
+* https://git.opendaylight.org/gerrit/#/c/38061/
+
+===== yangtools
+
+* https://git.opendaylight.org/gerrit/#/c/38178/
+
+===== yangide
+
+* https://git.opendaylight.org/gerrit/#/c/38159/
 
 
 ==== Implementation
