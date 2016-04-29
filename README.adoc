@@ -1,3 +1,5 @@
+Watch https://www.youtube.com/watch?v=BLW8aOh6WeQ video to see what this is all about.
+
 OpenDaylight has Oomph, and you can set up an Eclipse-based development workspace for OpenDaylight projects by:
 
 1. Downloading the Eclipse Installer from https://www.eclipse.org/downloads/ and starting it.
