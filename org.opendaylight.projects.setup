@@ -464,7 +464,8 @@
   </setupTask>
   <setupTask
       xsi:type="pde:TargetPlatformTask"
-      name="YANG IDE Target Platform">
+      name="YANG IDE Target Platform"
+      activate="false">
     <description></description>
   </setupTask>
   <project href="projects/aaa.setup#/"/>
