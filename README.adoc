@@ -7,7 +7,7 @@ OpenDaylight has Oomph, and you can set up an Eclipse-based development workspac
 3. On the *Product* page, select *Eclipse IDE for Java Developers*.
 4. On the *Projects* page, collapse the *Eclipse Projects* & *GitHub Projects* to scroll down to the *OpenDaylight.org Projects* (or use the "Select Catalogs" icon in the upper right hand corner for permanent filtering)
 5. Double-click the projects (i.e. ODL repos) of interest to you.
-5. Choose your installation settings on the *Variables* page, incl. root install directory location.
+5. Choose your installation settings on the *Variables* page, incl. your OpenDaylight.org username to access gerrit and a root install directory location for the workspace (projects Git repo can be elsewhere, see below)
 6. Finish the wizard and watch how your development environment is being assembled, courtesy of Oomph.
 
 This fully automates the manual steps currently described on
