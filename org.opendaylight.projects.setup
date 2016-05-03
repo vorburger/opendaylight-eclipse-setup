@@ -164,6 +164,10 @@
           key="/instance/org.infinitest.eclipse/org.infinitest.eclipse.auto">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.incompleteClasspath">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -188,6 +192,14 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.egit.ui/commit_dialog_signed_off_by"
           value="true"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.jdt.core">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.incompleteClasspath"
+          value="warning"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
