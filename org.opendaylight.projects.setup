@@ -199,7 +199,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.incompleteClasspath"
-          value="warning"/>
+          value="error"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
