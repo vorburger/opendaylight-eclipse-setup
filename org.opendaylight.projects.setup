@@ -160,6 +160,10 @@
           key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.ondemandthreshold">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.infinitest.eclipse/org.infinitest.eclipse.auto">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -316,6 +320,14 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.wst.xml.core/indentationSize"
           value="2"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.infinitest.eclipse">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.infinitest.eclipse/org.infinitest.eclipse.auto"
+          value="false"/>
     </setupTask>
   </setupTask>
   <setupTask
