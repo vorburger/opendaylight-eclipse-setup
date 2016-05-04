@@ -78,17 +78,12 @@ Until the Gerrits listed below get merged, you can locally work around these pro
 
 ===== Cross projects, affecting all
 
-* https://git.opendaylight.org/gerrit/#/c/37792/ causing org.apache.maven.plugin.MojoExecutionException: Artifact has not been packaged yet. When used on reactor artifact, unpack should be executed after packaging: see MDEP-98. (org.apache.maven.plugins:maven-dependency-plugin:2.10:unpack:unpack-license:generate-resources)
 * YANG code generation still requires manual mvn install after first git clone.  This will be fixed once the yangide plugin which auto-generates YANG code will be bundled by this setup model; pending https://bugs.opendaylight.org/show_bug.cgi?id=5798 & https://git.opendaylight.org/gerrit/#/c/38169/.
 
 ===== vpnservice
 
 * https://git.opendaylight.org/gerrit/#/c/38059/
 * https://git.opendaylight.org/gerrit/#/c/38061/
-
-===== yangtools
-
-* https://git.opendaylight.org/gerrit/#/c/38178/
 
 ===== yangide
 
