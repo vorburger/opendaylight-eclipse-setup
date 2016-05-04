@@ -49,6 +49,7 @@ Provision an Eclipse installation which includes:
 ** http://eclemma.org
 ** https://www.eclipse.org/egerrit/
 ** https://infinitest.github.io/
+** https://wiki.eclipse.org/Mylyn/WikiText/AsciiDoc
 
 In particular the M2Eclipse (M2) Maven Eclipse integration PITA is correctly configured with:
 
