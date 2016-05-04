@@ -432,6 +432,8 @@
         name="org.eclipse.emf.compare.feature.group"/>
     <requirement
         name="org.eclipse.mylyn.wikitext.extras.feature.group"/>
+    <requirement
+        name="org.psem2m.eclipse.rest.editor.feature.group"/>
     <repository
         url="http://update.eclemma.org"/>
     <repository
@@ -460,6 +462,8 @@
         url="http://download.eclipse.org/modeling/emf/compare/updates/releases/latest"/>
     <repository
         url="http://download.eclipse.org/mylyn/snapshots/nightly/docs/"/>
+    <repository
+        url="http://resteditor.sourceforge.net/eclipse"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
