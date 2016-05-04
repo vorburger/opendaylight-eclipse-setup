@@ -459,14 +459,6 @@
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
-      id="git.clone.github.eclipse.setup"
-      remoteURI="git@github.com:vorburger/opendaylight-eclipse-setup.git"
-      pushURI=""
-      checkoutBranch="master">
-    <description>git clone github.com:vorburger/opendaylight-eclipse-setup</description>
-  </setupTask>
-  <setupTask
-      xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.odlparent"
       remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/odlparent.git">
     <description>git clone git.opendaylight.org:29418/odlparent</description>
