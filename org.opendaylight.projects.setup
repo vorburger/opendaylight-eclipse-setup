@@ -404,6 +404,10 @@
   <setupTask
       xsi:type="setup.p2:P2Task">
     <requirement
+        name="org.eclipse.m2e.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.m2e.sdk.feature.feature.group"/>
+    <requirement
         name="com.mountainminds.eclemma.feature.feature.group"/>
     <requirement
         name="com.github.sevntu.checkstyle.checks.feature.feature.group"/>
@@ -484,6 +488,8 @@
         url="http://resteditor.sourceforge.net/eclipse"/>
     <repository
         url="http://download.eclipse.org/mylyn/releases/latest"/>
+    <repository
+        url="http://download.eclipse.org/technology/m2e/releases"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
