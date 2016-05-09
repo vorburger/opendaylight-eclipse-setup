@@ -446,6 +446,12 @@
         name="org.eclipse.mylyn.wikitext.extras.feature.group"/>
     <requirement
         name="org.psem2m.eclipse.rest.editor.feature.group"/>
+    <requirement
+        name="org.eclipse.mylyn.gerrit.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.mylyn.bugzilla_feature.feature.group"/>
+    <requirement
+        name="org.eclipse.mylyn.hudson.feature.group"/>
     <repository
         url="http://update.eclemma.org"/>
     <repository
@@ -476,6 +482,8 @@
         url="http://download.eclipse.org/mylyn/snapshots/nightly/docs/"/>
     <repository
         url="http://resteditor.sourceforge.net/eclipse"/>
+    <repository
+        url="http://download.eclipse.org/mylyn/releases/latest"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
