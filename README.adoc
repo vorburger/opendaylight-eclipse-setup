@@ -11,8 +11,7 @@ OpenDaylight has Oomph, and you can set up an Eclipse-based development workspac
 6. Finish the wizard and watch how your development environment is being assembled, courtesy of Oomph.
 
 This fully automates the manual steps currently described on
-https://wiki.opendaylight.org/view/GettingStarted:_Eclipse, in order for anyone to get easily started
-successfully hacking on https://www.opendaylight.org quickly, without having any red problem markers.
+https://wiki.opendaylight.org/view/GettingStarted:_Eclipse, in order for anyone to get easily started successfully hacking on https://www.opendaylight.org quickly, without having any red problem markers.
 
 This is implemented used an Eclipse "Oomph" workspace set up model, see http://www.eclipse.org/oomph
 
@@ -21,8 +20,9 @@ If you already have OpenDaylight projects git clone with existing local work, th
 "${installation.location/git/}${@id.remoteURI|gitRepository}" by something like 
 "/absolute/path/where/you/keep/your/opendaylight/clones/${@id.remoteURI|gitRepository}".
 
-To import more projects after completing the wizard, click on the "Perform Setup Tasks" yellow/blue circle arrows
-kind of icon in the Toolbar, next to the little blue man icon, and choose "Import Projects..." 
+In order to be able to propose changes to OpenDaylight via Gerrit, you'll of couse still need to your SSH public key to the ODL Gerrit account.  Note that this setup currently does the git clone via ssh:// not via https:// Git protocol.
+
+To import more projects after completing the wizard, click on the "Perform Setup Tasks" yellow/blue circle arrows kind of icon in the Toolbar, next to the little blue man icon, and choose "Import Projects...".  If those two icons are not visible in your toolbar, enable them using menu Window > Preferences > Oomph > Setup Tasks: [X] Show Toolbar contributions.
 
 This work was started on https://github.com/vorburger/opendaylight-eclipse-setup 
 just because it's easier for me to maintain it here for now.  As other ODL developers use this,
@@ -58,6 +58,7 @@ In particular the M2Eclipse (M2) Maven Eclipse integration PITA is correctly con
 * an appropriate lifecycle-mapping-metadata.xml for M2E
 * all required M2E connector plugins (buildhelper, m2e-code-quality, mavendev, tycho)
 * M2E Auto Update preference
+* Checkstyle gets configured, in line with Maven (it actually automatically reads the ODL Checkstyle configuration from the respective JAR in the local m2 repo; see Project > Properties > Checkstyle > Local Check Configurations tab)
 
 Then for each of the available ~80+ ODL repos you wish to import via the Wizard UI it does:
 
