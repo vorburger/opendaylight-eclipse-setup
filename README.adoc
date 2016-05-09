@@ -69,7 +69,7 @@ Then for each of the available ~80+ ODL repos you wish to import via the Wizard 
 
 Specific setup actions required by particular projects:
 
-* yangide: PDE Target Platform
+* yangide: m2e.sdk, EMF Compare, Graphiti in Target Platform
 * eclipse-setup: Oomph redirect to be able to work on the live *.setup in workspace 
 
 

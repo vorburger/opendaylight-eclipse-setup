@@ -456,6 +456,8 @@
         name="org.eclipse.mylyn.bugzilla_feature.feature.group"/>
     <requirement
         name="org.eclipse.mylyn.hudson.feature.group"/>
+    <requirement
+        name="org.eclipse.graphiti.feature.feature.group"/>
     <repository
         url="http://update.eclemma.org"/>
     <repository
@@ -490,6 +492,8 @@
         url="http://download.eclipse.org/mylyn/releases/latest"/>
     <repository
         url="http://download.eclipse.org/technology/m2e/releases"/>
+    <repository
+        url="http://download.eclipse.org/graphiti/updates/0.12.2"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
