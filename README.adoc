@@ -50,6 +50,7 @@ Provision an Eclipse installation which includes:
 ** https://pmd.github.io
 ** http://eclemma.org
 ** https://www.eclipse.org/egerrit/
+** https://github.com/oyse/yedit  YAML Editor (https://bugs.eclipse.org/bugs/show_bug.cgi?id=491050[until it's part of Eclipse])
 ** https://infinitest.github.io/
 ** https://wiki.eclipse.org/Mylyn/WikiText/AsciiDoc
 ** http://resteditor.sourceforge.net
