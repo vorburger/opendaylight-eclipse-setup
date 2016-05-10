@@ -172,6 +172,10 @@
           key="/instance/org.eclipse.oomph.setup.ui/showToolBarContributions">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.oomph.ui/showOffline">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -311,6 +315,14 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.oomph.setup.ui/showToolBarContributions"
+          value="true"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.oomph.ui">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.oomph.ui/showOffline"
           value="true"/>
     </setupTask>
     <setupTask

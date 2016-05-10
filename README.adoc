@@ -24,6 +24,8 @@ In order to be able to propose changes to OpenDaylight via Gerrit, you'll of cou
 
 To import more projects after completing the wizard, click on the "Perform Setup Tasks" yellow/blue circle arrows kind of icon in the Toolbar, next to the little blue man icon, and choose "Import Projects...".  If those two icons are not visible in your toolbar, enable them using menu Window > Preferences > Oomph > Setup Tasks: [X] Show Toolbar contributions.
 
+Tip: If your Import Projects / Perform Setup Tasks fails e.g. because download.eclipse.org is down (which happens sometimes), then you can still proceed if you have previously already installed the required Eclipse plugins, either by clicking the Offline icon on the toolbar, or by un-checking the P2 Director task in the "tasks to be executed and optionally uncheck unwanted tasks" pop-up confirmation dialog. 
+
 This work was started on https://github.com/vorburger/opendaylight-eclipse-setup 
 just because it's easier for me to maintain it here for now.  As other ODL developers use this,
 perhaps we'll move it to https://git.opendaylight.org.  
