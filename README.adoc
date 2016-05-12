@@ -84,6 +84,11 @@ Until the Gerrits listed below get merged, you can locally work around these pro
 
 * YANG code generation still requires manual mvn install after first git clone.  This will be fixed once the yangide plugin which auto-generates YANG code will be bundled by this setup model; pending https://bugs.opendaylight.org/show_bug.cgi?id=5798 & https://git.opendaylight.org/gerrit/#/c/38169/.
 
+* Checkstyle
+** version of Checkstyle JAR used in Maven and Eclipse plug-in have to be made to match, see https://git.opendaylight.org/gerrit/#/c/37801/ and https://git.opendaylight.org/gerrit/#/c/37796/ and https://git.opendaylight.org/gerrit/#/c/38211/; and keep matched (unless https://sourceforge.net/p/eclipse-cs/feature-requests/158/ is implemented)  
+** OpenDaylight custom Checkstyle checks from org.opendaylight.yangtools.checkstyle-logging (used e.g. in AAA) cause issues; need to either write a new Eclipse plugin just for that (urgh), or contribute https://sourceforge.net/p/eclipse-cs/feature-requests/159/.
+
+
 ===== vpnservice
 
 * https://git.opendaylight.org/gerrit/#/c/38059/
