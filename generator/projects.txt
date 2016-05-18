@@ -15,7 +15,8 @@ docs
 faas
 genius
 groupbasedpolicy
-integration
+integration/distribution
+integration/packaging
 iotdm
 l2switch
 lacp

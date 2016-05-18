@@ -581,7 +581,8 @@
   <project href="projects/faas.setup#/"/>
   <project href="projects/genius.setup#/"/>
   <project href="projects/groupbasedpolicy.setup#/"/>
-  <project href="projects/integration.setup#/"/>
+  <project href="projects/integration/distribution.setup#/"/>
+  <project href="projects/integration/packaging.setup#/"/>
   <project href="projects/iotdm.setup#/"/>
   <project href="projects/l2switch.setup#/"/>
   <project href="projects/lacp.setup#/"/>

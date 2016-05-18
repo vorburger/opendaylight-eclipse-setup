@@ -22,7 +22,7 @@ class ProjectsSetupGenerator {
             name="«projectName»">
           <setupTask
               xsi:type="git:GitCloneTask"
-              id="git.clone.opendaylight.«projectName»"
+              id="git.clone.opendaylight.«validId(projectName)»"
               remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/«projectName».git">
             <description>git clone git.opendaylight.org:29418/«projectName»</description>
           </setupTask>
@@ -31,7 +31,7 @@ class ProjectsSetupGenerator {
               id="import.maven"
               projectNameTemplate="[groupId].[artifactId]">
             <sourceLocator
-                rootFolder="${git.clone.opendaylight.«projectName».location}"
+                rootFolder="${git.clone.opendaylight.«validId(projectName)».location}"
                 locateNestedProjects="true"/>
           </setupTask>
           <setupTask
@@ -40,19 +40,27 @@ class ProjectsSetupGenerator {
                 name="«projectName»">
               <predicate
                   xsi:type="predicates:LocationPredicate"
-                  pattern="${git.clone.opendaylight.«projectName».location}.*"/>
+                  pattern="${git.clone.opendaylight.«validId(projectName)».location}.*"/>
             </workingSet>
           </setupTask>
           <stream name="master"/>
           <logicalProjectContainer
               xsi:type="setup:ProjectCatalog"
-              href="../org.opendaylight.projects.setup#/"/>
+              href="«IF projectName.contains("/")»../..«ELSE»..«ENDIF»/org.opendaylight.projects.setup#/"/>
         </setup:Project>
     '''
+
+    def validId(String variableName) {
+        if (variableName.contains("/"))
+            variableName.replace('/', '_')
+        else
+            variableName
+    }
 
     def writeProjectSetup(String projectName) {
         val projectSetupText = generateProjectSetup(projectName)
         val projectSetupFile = new File("../projects/" + projectName + ".setup") 
+        projectSetupFile.parentFile.mkdirs
         Files.write(projectSetupText, projectSetupFile, Charsets.UTF_8)
     }
     
