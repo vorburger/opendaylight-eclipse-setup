@@ -437,6 +437,11 @@
     <description>Initialize M2E's Maven Lifecycle Mappings, see https://www.eclipse.org/m2e/documentation/m2e-execution-not-covered.html &amp; https://wiki.eclipse.org/M2E_compatible_maven_plugins</description>
   </setupTask>
   <setupTask
+      xsi:type="setup:ResourceCreationTask"
+      content="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&lt;archetypeCatalogs>&lt;catalog type=&quot;remote&quot; location=&quot;http://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/archetype-catalog.xml&quot; description=&quot;OpenDaylight.org (SNAPSHOT)&quot;/>&lt;/archetypeCatalogs>"
+      targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.m2e.core/archetypesInfo.xml"
+      encoding="UTF-8"/>
+  <setupTask
       xsi:type="setup:VariableTask"
       name="eclipse.target.platform"
       defaultValue="Neon"
