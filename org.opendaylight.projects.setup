@@ -588,6 +588,7 @@
   <project href="projects/groupbasedpolicy.setup#/"/>
   <project href="projects/integration/distribution.setup#/"/>
   <project href="projects/integration/packaging.setup#/"/>
+  <project href="projects/integration/test.setup#/"/>
   <project href="projects/iotdm.setup#/"/>
   <project href="projects/l2switch.setup#/"/>
   <project href="projects/lacp.setup#/"/>

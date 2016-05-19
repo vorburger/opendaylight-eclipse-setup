@@ -17,6 +17,7 @@ genius
 groupbasedpolicy
 integration/distribution
 integration/packaging
+integration/test
 iotdm
 l2switch
 lacp
