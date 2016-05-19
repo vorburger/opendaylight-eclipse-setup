@@ -14,7 +14,8 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.yang-push"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/yang-push.git">
+      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/yang-push.git"
+      location="${installation.location/git/}yang-push">
     <description>git clone git.opendaylight.org:29418/yang-push</description>
   </setupTask>
   <setupTask

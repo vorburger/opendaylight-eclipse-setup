@@ -14,7 +14,8 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.atrium"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/atrium.git">
+      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/atrium.git"
+      location="${installation.location/git/}atrium">
     <description>git clone git.opendaylight.org:29418/atrium</description>
   </setupTask>
   <setupTask

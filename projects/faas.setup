@@ -14,7 +14,8 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.faas"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/faas.git">
+      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/faas.git"
+      location="${installation.location/git/}faas">
     <description>git clone git.opendaylight.org:29418/faas</description>
   </setupTask>
   <setupTask

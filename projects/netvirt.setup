@@ -14,7 +14,8 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.netvirt"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/netvirt.git">
+      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/netvirt.git"
+      location="${installation.location/git/}netvirt">
     <description>git clone git.opendaylight.org:29418/netvirt</description>
   </setupTask>
   <setupTask

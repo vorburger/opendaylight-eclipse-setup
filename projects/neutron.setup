@@ -14,7 +14,8 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.neutron"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/neutron.git">
+      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/neutron.git"
+      location="${installation.location/git/}neutron">
     <description>git clone git.opendaylight.org:29418/neutron</description>
   </setupTask>
   <setupTask

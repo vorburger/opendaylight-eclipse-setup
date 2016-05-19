@@ -14,7 +14,8 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.tsdr"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/tsdr.git">
+      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/tsdr.git"
+      location="${installation.location/git/}tsdr">
     <description>git clone git.opendaylight.org:29418/tsdr</description>
   </setupTask>
   <setupTask

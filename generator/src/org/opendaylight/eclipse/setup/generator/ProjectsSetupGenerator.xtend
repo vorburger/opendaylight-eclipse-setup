@@ -23,7 +23,8 @@ class ProjectsSetupGenerator {
           <setupTask
               xsi:type="git:GitCloneTask"
               id="git.clone.opendaylight.«validId(projectName)»"
-              remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/«projectName».git">
+              remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/«projectName».git"
+              location="${installation.location/git/}«projectName»">
             <description>git clone git.opendaylight.org:29418/«projectName»</description>
           </setupTask>
           <setupTask

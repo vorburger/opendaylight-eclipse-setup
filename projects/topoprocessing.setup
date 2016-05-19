@@ -14,7 +14,8 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.topoprocessing"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/topoprocessing.git">
+      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/topoprocessing.git"
+      location="${installation.location/git/}topoprocessing">
     <description>git clone git.opendaylight.org:29418/topoprocessing</description>
   </setupTask>
   <setupTask
