@@ -188,6 +188,14 @@
           key="/instance/net.sf.eclipsecs.core/marker.amount.limit">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.jboss.tools.maven.apt/org.jboss.tools.maven.apt.aptProcessDuringReconcile">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.jboss.tools.maven.apt/org.jboss.tools.maven.apt.mode">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -393,6 +401,18 @@
           key="/instance/org.infinitest.eclipse/org.infinitest.eclipse.auto"
           value="false"/>
     </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.jboss.tools.maven.apt">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.jboss.tools.maven.apt/org.jboss.tools.maven.apt.aptProcessDuringReconcile"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.jboss.tools.maven.apt/org.jboss.tools.maven.apt.mode"
+          value="jdt_apt"/>
+    </setupTask>
   </setupTask>
   <setupTask
       xsi:type="jdt:JRETask"
@@ -509,6 +529,8 @@
         name="org.opendaylight.yangide.feature.feature.group"/>
     <requirement
         name="org.opendaylight.yangide.m2e.yang.feature.feature.group"/>
+    <requirement
+        name="org.jboss.tools.maven.apt.feature.feature.group"/>
     <repository
         url="http://update.eclemma.org"/>
     <repository
@@ -549,6 +571,8 @@
         url="http://dadacoalition.org/yedit"/>
     <repository
         url="https://nexus.opendaylight.org/content/sites/p2repos/org.opendaylight.yangide/snapshot/"/>
+    <repository
+        url="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"

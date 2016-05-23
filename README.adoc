@@ -59,7 +59,7 @@ In particular the M2Eclipse (M2) Maven Eclipse integration PITA is correctly con
 
 * settings.xml for nexus.opendaylight.org
 * an appropriate lifecycle-mapping-metadata.xml for M2E
-* all required M2E connector plugins (buildhelper, m2e-code-quality, mavendev, tycho)
+* all required M2E connector plugins (buildhelper, m2e-code-quality, mavendev, tycho, m2e-apt incl. config)
 * M2E Auto Update preference
 * Checkstyle gets configured, in line with Maven (it actually automatically reads the ODL Checkstyle configuration from the respective JAR in the local m2 repo; see Project > Properties > Checkstyle > Local Check Configurations tab)
 
