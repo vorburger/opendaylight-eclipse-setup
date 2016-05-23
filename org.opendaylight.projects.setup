@@ -505,6 +505,10 @@
         name="org.eclipse.graphiti.feature.feature.group"/>
     <requirement
         name="org.dadacoalition.yedit.feature.feature.group"/>
+    <requirement
+        name="org.opendaylight.yangide.feature.feature.group"/>
+    <requirement
+        name="org.opendaylight.yangide.m2e.yang.feature.feature.group"/>
     <repository
         url="http://update.eclemma.org"/>
     <repository
@@ -543,6 +547,8 @@
         url="http://download.eclipse.org/graphiti/updates/0.12.2"/>
     <repository
         url="http://dadacoalition.org/yedit"/>
+    <repository
+        url="https://nexus.opendaylight.org/content/sites/p2repos/org.opendaylight.yangide/snapshot/"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
