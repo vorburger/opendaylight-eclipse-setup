@@ -196,7 +196,19 @@
           key="/instance/org.jboss.tools.maven.apt/org.jboss.tools.maven.apt.mode">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/de.jayefem.log4e/LOGGER_PROFILE">
+        <value>record</value>
+      </detail>
     </annotation>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="de.jayefem.log4e">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/de.jayefem.log4e/LOGGER_PROFILE"
+          value="SLF4J"/>
+    </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
         name="net.sf.eclipsecs.core">
@@ -531,6 +543,8 @@
         name="org.opendaylight.yangide.m2e.yang.feature.feature.group"/>
     <requirement
         name="org.jboss.tools.maven.apt.feature.feature.group"/>
+    <requirement
+        name="de.jayefem.log4e.feature.group"/>
     <repository
         url="http://update.eclemma.org"/>
     <repository
@@ -573,6 +587,8 @@
         url="https://nexus.opendaylight.org/content/sites/p2repos/org.opendaylight.yangide/snapshot/"/>
     <repository
         url="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt"/>
+    <repository
+        url="http://log4e.jayefem.de/update"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
