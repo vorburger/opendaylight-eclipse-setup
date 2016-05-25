@@ -54,6 +54,7 @@ Provision an Eclipse installation which includes:
 ** https://infinitest.github.io/
 ** https://wiki.eclipse.org/Mylyn/WikiText/AsciiDoc
 ** http://resteditor.sourceforge.net
+** http://logback.qos.ch/beagle/ (see below)
 
 In particular the M2Eclipse (M2) Maven Eclipse integration PITA is correctly configured with:
 
@@ -99,6 +100,13 @@ Until the Gerrits listed below get merged, you can locally work around these pro
 ===== yangide
 
 * https://git.opendaylight.org/gerrit/#/c/38159/
+
+
+==== How-to....
+
+===== Use Logback beagle, an Eclipse plug-in for viewing logs
+
+_TODO_
 
 
 ==== Implementation
