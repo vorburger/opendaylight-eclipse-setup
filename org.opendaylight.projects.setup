@@ -540,7 +540,7 @@
     <repository
         url="http://m2e-code-quality.github.io/m2e-code-quality/site"/>
     <repository
-        url="http://findbugs.cs.umd.edu/eclipse"/>
+        url="http://findbugs.cs.umd.edu/eclipse-daily/"/>
     <repository
         url="http://sourceforge.net/projects/pmd/files/pmd-eclipse/update-site/"/>
     <repository
