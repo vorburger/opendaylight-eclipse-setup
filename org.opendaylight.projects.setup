@@ -531,6 +531,8 @@
         name="org.opendaylight.yangide.m2e.yang.feature.feature.group"/>
     <requirement
         name="org.jboss.tools.maven.apt.feature.feature.group"/>
+    <requirement
+        name="AnyEditTools.feature.group"/>
     <repository
         url="http://update.eclemma.org"/>
     <repository
@@ -573,6 +575,8 @@
         url="https://nexus.opendaylight.org/content/sites/p2repos/org.opendaylight.yangide/snapshot/"/>
     <repository
         url="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt"/>
+    <repository
+        url="http://andrei.gmxhome.de/eclipse/"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"

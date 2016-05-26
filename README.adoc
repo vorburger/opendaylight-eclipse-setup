@@ -54,6 +54,7 @@ Provision an Eclipse installation which includes:
 ** https://infinitest.github.io/
 ** https://wiki.eclipse.org/Mylyn/WikiText/AsciiDoc
 ** http://resteditor.sourceforge.net
+** http://andrei.gmxhome.de/anyedit/  with configuration Remove trailing whitespace for all text files, not just *.java, as enforced by ODL Checkstyle; core Eclipse Platform Text lacks this, see (https://bugs.eclipse.org/bugs/show_bug.cgi?id=180349)[bug 180349]
 
 In particular the M2Eclipse (M2) Maven Eclipse integration PITA is correctly configured with:
 
