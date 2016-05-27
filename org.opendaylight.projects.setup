@@ -196,6 +196,10 @@
           key="/instance/org.jboss.tools.maven.apt/org.jboss.tools.maven.apt.mode">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.ui/escapeStrings">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -251,6 +255,10 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/editor_save_participant_org.eclipse.jdt.ui.postsavelistener.cleanup"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/escapeStrings"
           value="true"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
