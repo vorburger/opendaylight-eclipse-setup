@@ -200,6 +200,10 @@
           key="/instance/org.eclipse.jdt.ui/escapeStrings">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_templates">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -284,6 +288,10 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.staticondemandthreshold"
           value="999"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_templates"
+          value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;templates>&lt;template autoinsert=&quot;true&quot; context=&quot;java&quot; deleted=&quot;false&quot; description=&quot;&quot; enabled=&quot;true&quot; name=&quot;LOG&quot;>private static final $${lt:newType(org.slf4j.Logger)} LOG = $${lf:newType(org.slf4j.LoggerFactory)}.getLogger($${enclosing_type}.class);&lt;/template>&lt;/templates>"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/sp_cleanup.convert_functional_interfaces"
