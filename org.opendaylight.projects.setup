@@ -593,6 +593,8 @@
         name="org.jboss.tools.maven.apt.feature.feature.group"/>
     <requirement
         name="AnyEditTools.feature.group"/>
+    <requirement
+        name="com.mousefeed.feature.feature.group"/>
     <repository
         url="http://update.eclemma.org"/>
     <repository
@@ -637,6 +639,8 @@
         url="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt"/>
     <repository
         url="http://andrei.gmxhome.de/eclipse/"/>
+    <repository
+        url="http://download.sigasi.com/updates/mousefeed"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"

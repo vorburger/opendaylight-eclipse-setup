@@ -17,19 +17,19 @@ This is implemented used an Eclipse "Oomph" workspace set up model, see http://w
 
 By default, it will git clone the repos of all projects you clicked into your new ${installation.location/git}.
 If you already have OpenDaylight projects git clone with existing local work, then simply on the "Variables" step of the Eclipse Installer, click [X] Show all variables, and replace the "Git clone location:" variable which defaults to
-"${installation.location/git/}${@id.remoteURI|gitRepository}" by something like 
+"${installation.location/git/}${@id.remoteURI|gitRepository}" by something like
 "/absolute/path/where/you/keep/your/opendaylight/clones/${@id.remoteURI|gitRepository}".
 
 In order to be able to propose changes to OpenDaylight via Gerrit, you'll of couse still need to your SSH public key to the ODL Gerrit account.  Note that this setup currently does the git clone via ssh:// not via https:// Git protocol.
 
 To import more projects after completing the wizard, click on the "Perform Setup Tasks" yellow/blue circle arrows kind of icon in the Toolbar, next to the little blue man icon, and choose "Import Projects...".  If those two icons are not visible in your toolbar, enable them using menu Window > Preferences > Oomph > Setup Tasks: [X] Show Toolbar contributions.
 
-Tip: If your Import Projects / Perform Setup Tasks fails e.g. because download.eclipse.org is down (which happens sometimes), then you can still proceed if you have previously already installed the required Eclipse plugins, either by clicking the Offline icon on the toolbar, or by un-checking the P2 Director task in the "tasks to be executed and optionally uncheck unwanted tasks" pop-up confirmation dialog. 
+Tip: If your Import Projects / Perform Setup Tasks fails e.g. because download.eclipse.org is down (which happens sometimes), then you can still proceed if you have previously already installed the required Eclipse plugins, either by clicking the Offline icon on the toolbar, or by un-checking the P2 Director task in the "tasks to be executed and optionally uncheck unwanted tasks" pop-up confirmation dialog.
 
-This work was started on https://github.com/vorburger/opendaylight-eclipse-setup 
+This work was started on https://github.com/vorburger/opendaylight-eclipse-setup
 just because it's easier for me to maintain it here for now.  As other ODL developers use this,
-perhaps we'll move it to https://git.opendaylight.org.  
-TODO which repo, new or inside an existing one? 
+perhaps we'll move it to https://git.opendaylight.org.
+TODO which repo, new or inside an existing one?
 
 Michael Vorburger @ work @ Red Hat
 April 2016
@@ -55,6 +55,7 @@ Provision an Eclipse installation which includes:
 ** https://wiki.eclipse.org/Mylyn/WikiText/AsciiDoc
 ** http://resteditor.sourceforge.net
 ** http://andrei.gmxhome.de/anyedit/  with configuration Remove trailing whitespace for all text files, not just *.java, as enforced by ODL Checkstyle; core Eclipse Platform Text lacks this, see (https://bugs.eclipse.org/bugs/show_bug.cgi?id=180349)[bug 180349]
+** https://github.com/heeckhau/mousefeed (NOTE https://github.com/heeckhau/mousefeed/issues/4)
 
 In particular the M2Eclipse (M2) Maven Eclipse integration PITA is correctly configured with:
 
@@ -74,7 +75,7 @@ Then for each of the available ~80+ ODL repos you wish to import via the Wizard 
 Specific setup actions required by particular projects:
 
 * yangide: m2e.sdk, EMF Compare, Graphiti in Target Platform
-* eclipse-setup: Oomph redirect to be able to work on the live *.setup in workspace 
+* eclipse-setup: Oomph redirect to be able to work on the live *.setup in workspace
 
 
 ==== Known open issues causing red in opendaylight Eclipse workspace
@@ -83,12 +84,12 @@ Until the Gerrits listed below get merged, you can locally work around these pro
 
 ===== Cross projects, affecting all
 
-* The "javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target" error while fetching url https://nexus.opendaylight.org/content/sites/p2repos/org.opendaylight.yangide/snapshot/content.xml: You have been hit by https://bugs.opendaylight.org/show_bug.cgi?id=5806.  It appears that OpenJDK does not have this problem; it's specific to Oracle JDK.  You can also try to import the respective CA cert into your store as described e.g. https://bugs.eclipse.org/bugs/show_bug.cgi?id=492014#c1 and in other places online, if you are up for it.  The only other thing I can do is encourage you to whine about that issue on e.g. the integration-dev@lists.opendaylight.org and/or dev@lists.opendaylight.org mailing lists, and comment and vote for it on that bugzilla issue. 
+* The "javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target" error while fetching url https://nexus.opendaylight.org/content/sites/p2repos/org.opendaylight.yangide/snapshot/content.xml: You have been hit by https://bugs.opendaylight.org/show_bug.cgi?id=5806.  It appears that OpenJDK does not have this problem; it's specific to Oracle JDK.  You can also try to import the respective CA cert into your store as described e.g. https://bugs.eclipse.org/bugs/show_bug.cgi?id=492014#c1 and in other places online, if you are up for it.  The only other thing I can do is encourage you to whine about that issue on e.g. the integration-dev@lists.opendaylight.org and/or dev@lists.opendaylight.org mailing lists, and comment and vote for it on that bugzilla issue.
 
 * YANG code generation still requires manual mvn install after first git clone.  This will be fixed once the yangide plugin which auto-generates YANG code will be bundled by this setup model; pending https://bugs.opendaylight.org/show_bug.cgi?id=5798 & https://git.opendaylight.org/gerrit/#/c/38169/.
 
 * Checkstyle
-** version of Checkstyle JAR used in Maven and Eclipse plug-in have to be made to match, see https://git.opendaylight.org/gerrit/#/c/37801/ and https://git.opendaylight.org/gerrit/#/c/37796/ and https://git.opendaylight.org/gerrit/#/c/38211/; and keep matched (unless https://sourceforge.net/p/eclipse-cs/feature-requests/158/ is implemented)  
+** version of Checkstyle JAR used in Maven and Eclipse plug-in have to be made to match, see https://git.opendaylight.org/gerrit/#/c/37801/ and https://git.opendaylight.org/gerrit/#/c/37796/ and https://git.opendaylight.org/gerrit/#/c/38211/; and keep matched (unless https://sourceforge.net/p/eclipse-cs/feature-requests/158/ is implemented)
 ** OpenDaylight custom Checkstyle checks from org.opendaylight.yangtools.checkstyle-logging (used e.g. in AAA) cause issues; need to either write a new Eclipse plugin just for that (urgh), or contribute https://sourceforge.net/p/eclipse-cs/feature-requests/159/.
 
 
@@ -106,19 +107,19 @@ Until the Gerrits listed below get merged, you can locally work around these pro
 
 ===== Project List
 
-To add a new project, just: 
+To add a new project, just:
 
 1. choose "eclipse-setup" in the Setup Wizard project list (it's a project like any other ODL project)
 
 2. edit generator/projects.txt
 
-3. run ProjectsSetupGenerator.xtend 
+3. run ProjectsSetupGenerator.xtend
 
 4. edit org.opendaylight.projects.setup to add the new <project href=".."> printed out by ProjectsSetupGenerator.xtend
 
 5. test importing your new project, as described in "To import more projects.." above.  Note that due to an automated redirect that was set up when you provisioned the "eclipse-setup" project, the *.setup models in your workspace are "live", and Oomph will use those models instead of the remote one - perfect for local testing.
- 
-Please note that the projects/*.setup are auto-generated by the generator/src/../ProjectsSetupGenerator.xtend, based on the generator/projects.txt list.  
+
+Please note that the projects/*.setup are auto-generated by the generator/src/../ProjectsSetupGenerator.xtend, based on the generator/projects.txt list.
 
 Those  projects/*.setup models should thus never be hand-edited (contrary to the root org.opendaylight.projects.setup); instead fix the template in the ProjectsSetupGenerator
 if anything could be improved, and re-run the generator.
