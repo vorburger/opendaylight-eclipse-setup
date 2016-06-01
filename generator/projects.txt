@@ -9,6 +9,7 @@ capwap
 cardinal
 centinel
 controller
+coretutorials
 didm
 dlux
 docs
@@ -53,7 +54,7 @@ ttp
 unimgr
 usc
 usecplugin
-vpnservice 
+vpnservice
 vtn
 yangide
 yang-push
