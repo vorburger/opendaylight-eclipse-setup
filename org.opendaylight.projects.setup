@@ -600,7 +600,7 @@
     <repository
         url="http://dadacoalition.org/yedit"/>
     <repository
-        url="https://nexus.opendaylight.org/content/sites/p2repos/org.opendaylight.yangide/snapshot/"/>
+        url="http://209.132.179.72/job/yangide/lastSuccessfulBuild/artifact/product/update-site/target/repository/"/>
     <repository
         url="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt"/>
     <repository
