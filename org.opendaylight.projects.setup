@@ -208,6 +208,10 @@
           key="/instance/org.eclipse.tm.terminal.control/TerminalPrefInvertColors">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.unhandledWarningToken">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -252,6 +256,10 @@
     <setupTask
         xsi:type="setup:CompoundTask"
         name="org.eclipse.jdt.core">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.unhandledWarningToken"
+          value="ignore"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.incompleteClasspath"
