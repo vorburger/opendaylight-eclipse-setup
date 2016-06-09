@@ -216,6 +216,10 @@
           key="/instance/org.eclipse.ui.workbench/SAVE_AUTOMATICALLY">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.ui.monitoring/monitoring_enabled">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -415,6 +419,14 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.ide/SAVE_ALL_BEFORE_BUILD"
+          value="true"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.ui.monitoring">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.monitoring/monitoring_enabled"
           value="true"/>
     </setupTask>
     <setupTask
