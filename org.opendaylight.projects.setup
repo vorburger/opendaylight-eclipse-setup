@@ -220,6 +220,10 @@
           key="/instance/org.eclipse.ui.monitoring/monitoring_enabled">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.sonarlint.eclipse.ui/markerSeverity">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -473,6 +477,14 @@
           key="/instance/org.jboss.tools.maven.apt/org.jboss.tools.maven.apt.mode"
           value="jdt_apt"/>
     </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.sonarlint.eclipse.ui">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.sonarlint.eclipse.ui/markerSeverity"
+          value="2"/>
+    </setupTask>
   </setupTask>
   <setupTask
       xsi:type="jdt:JRETask"
@@ -520,6 +532,11 @@
       xsi:type="setup:ResourceCreationTask"
       content="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&lt;archetypeCatalogs>&lt;catalog type=&quot;remote&quot; location=&quot;http://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/archetype-catalog.xml&quot; description=&quot;OpenDaylight.org (SNAPSHOT)&quot;/>&lt;/archetypeCatalogs>"
       targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.m2e.core/archetypesInfo.xml"
+      encoding="UTF-8"/>
+  <setupTask
+      xsi:type="setup:ResourceCreationTask"
+      content="eclipse.preferences.version=1&#xA;servers/initialized=false&#xA;servers/sonar.opendaylight.org/auth=true&#xA;servers/sonar.opendaylight.org/url=https\://sonar.opendaylight.org"
+      targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.sonarlint.eclipse.core.prefs"
       encoding="UTF-8"/>
   <setupTask
       xsi:type="setup:VariableTask"
@@ -595,6 +612,10 @@
         name="AnyEditTools.feature.group"/>
     <requirement
         name="com.mousefeed.feature.feature.group"/>
+    <requirement
+        name="org.sonarlint.eclipse.feature.feature.group"/>
+    <requirement
+        name="org.sonarlint.eclipse.jdt.feature.feature.group"/>
     <repository
         url="http://update.eclemma.org"/>
     <repository
@@ -641,6 +662,8 @@
         url="http://andrei.gmxhome.de/eclipse/"/>
     <repository
         url="http://download.sigasi.com/updates/mousefeed"/>
+    <repository
+        url="http://eclipse.sonarlint.org/"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
