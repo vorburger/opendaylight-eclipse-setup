@@ -78,6 +78,19 @@ Specific setup actions required by particular projects:
 * eclipse-setup: Oomph redirect to be able to work on the live *.setup in workspace
 
 
+==== FAQ
+
+Q: Wouldn't it be better to disable automatic rebuilding?
+A: No, because then when switching branches the Java index used for validation and autocompletion would be out-of-date.
+
+Q: Automatic workspace building is slow.
+A: There is probably room for improvement, likely more so in Builders of 3rd party plugins than core Eclipse, e.g. yangide, checkstyle etc.  Contributions which performance profile these and help with improvements those projects improve their performance are certainly highly welcome.
+
+Q: Why do I have to do "mvn install" to make red ink go away after I switch branches?
+A: You should not have to. E.g. the yangide plugin is included here so that it would auto. regen. the Java code in line with changes to YANG e.g. from branch switching.  If this does not work in your project, please let me know so that we can look at what needs to be changes.  Most likely, it's a left over wrong M2E lifecycle mapping which suppresses the intended and automatic re-generation which is working on other projects.
+
+
+
 ==== Known open issues causing red in opendaylight Eclipse workspace
 
 Until the Gerrits listed below get merged, you can locally work around these problems by pulling the listed Gerrit changes into your workspace.  You do not need to mvn install, because M2E "workspace resolution" will make the changes immediately effective.
