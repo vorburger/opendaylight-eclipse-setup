@@ -97,6 +97,8 @@ Until the Gerrits listed below get merged, you can locally work around these pro
 
 ===== Cross projects, affecting all
 
+* The very first time Eclipse opens, you'll have to File > Restart it once.  This is because the automated Preference which Oomph applies so that it uses nexus.opendaylight.org instead of Maven central has only just been configured, and M2E didn't automatically pick it up.
+
 * The "javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target" error while fetching url https://nexus.opendaylight.org/content/sites/p2repos/org.opendaylight.yangide/snapshot/content.xml: You have been hit by https://bugs.opendaylight.org/show_bug.cgi?id=5806.  It appears that OpenJDK does not have this problem; it's specific to Oracle JDK.  You can also try to import the respective CA cert into your store as described e.g. https://bugs.eclipse.org/bugs/show_bug.cgi?id=492014#c1 and in other places online, if you are up for it.  The only other thing I can do is encourage you to whine about that issue on e.g. the integration-dev@lists.opendaylight.org and/or dev@lists.opendaylight.org mailing lists, and comment and vote for it on that bugzilla issue.
 
 * YANG code generation still requires manual mvn install after first git clone.  This will be fixed once the yangide plugin which auto-generates YANG code will be bundled by this setup model; pending https://bugs.opendaylight.org/show_bug.cgi?id=5798 & https://git.opendaylight.org/gerrit/#/c/38169/.
