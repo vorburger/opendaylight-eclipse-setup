@@ -621,6 +621,14 @@
         name="org.sonarlint.eclipse.feature.feature.group"/>
     <requirement
         name="org.sonarlint.eclipse.jdt.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.rse.terminals.feature.group"/>
+    <requirement
+        name="org.eclipse.rse.local.feature.group"/>
+    <requirement
+        name="org.eclipse.rse.useractions.feature.group"/>
+    <requirement
+        name="org.eclipse.rse.feature.group"/>
     <repository
         url="http://update.eclemma.org"/>
     <repository
@@ -669,6 +677,8 @@
         url="http://download.sigasi.com/updates/mousefeed"/>
     <repository
         url="http://eclipse.sonarlint.org/"/>
+    <repository
+        url="http://download.eclipse.org/tm/updates/4.0"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
