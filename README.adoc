@@ -1,4 +1,8 @@
-Watch https://www.youtube.com/watch?v=BLW8aOh6WeQ video to see what this is all about.  If you like/use this project, a Star / Watch / Follow me on GitHub is appreciated.
+If you like/use this project, a Star / Watch / Follow me on GitHub is appreciated.
+
+Watch https://www.youtube.com/watch?v=BLW8aOh6WeQ  screencast video to see what this is all about.
+
+Watch https://www.youtube.com/watch?v=TU1zjytlwFE  recording of presentation from OpenDaylight Mini Summit June 2016.  Slides from this session are also available here http://www.slideshare.net/mikervorburger/opendaylight-developers-experience-15-eclipse-setup-hot-reload-future-plans (faster) and (in better quality) here https://docs.google.com/presentation/d/14yLzog3OhIlVsk7Clr0Tff1YayRcFnQCUZqxHMWxiNI/.
 
 OpenDaylight has Oomph, and you can set up an Eclipse-based development workspace for OpenDaylight projects by:
 
