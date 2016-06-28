@@ -232,7 +232,35 @@
           key="/instance/org.eclipse.ui.monitoring/long_event_warning_threshold">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.e4.ui.workbench.renderers.swt/themeEnabled">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.eclipse.ui.editors/spacesForTabs">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.eclipse.e4.ui.css.swt.theme/themeid">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.eclipse.e4.ui.workbench.renderers.swt/enableMRU">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/com.basistech.m2e.code.quality.checkstyle/eclipseCheckstyleGenerateFormatterSettings">
+        <value>record</value>
+      </detail>
     </annotation>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="com.basistech.m2e.code.quality.checkstyle">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/com.basistech.m2e.code.quality.checkstyle/eclipseCheckstyleGenerateFormatterSettings"
+          value="true"/>
+    </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
         name="net.sf.eclipsecs.core">
@@ -256,6 +284,26 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.compare/org.eclipse.compare.IgnoreWhitespace"
           value="false"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.e4.ui.css.swt.theme">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.e4.ui.css.swt.theme/themeid"
+          value="org.eclipse.e4.ui.css.theme.e4_default"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.e4.ui.workbench.renderers.swt">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.e4.ui.workbench.renderers.swt/enableMRU"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.e4.ui.workbench.renderers.swt/themeEnabled"
+          value="true"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -424,6 +472,14 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui/defaultPerspectiveId"
           value="org.eclipse.jdt.ui.JavaPerspective"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.ui.editors">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.editors/spacesForTabs"
+          value="true"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
