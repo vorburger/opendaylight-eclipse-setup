@@ -618,6 +618,10 @@
     <requirement
         name="com.mousefeed.feature.feature.group"/>
     <requirement
+        name="org.eclipse.tm.terminal.connector.local.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.tm.terminal.connector.ssh.feature.feature.group"/>
+    <requirement
         name="org.sonarlint.eclipse.feature.feature.group"/>
     <requirement
         name="org.sonarlint.eclipse.jdt.feature.feature.group"/>
@@ -669,6 +673,8 @@
         url="http://download.sigasi.com/updates/mousefeed"/>
     <repository
         url="http://eclipse.sonarlint.org/"/>
+    <repository
+        url="http://download.eclipse.org/tm/terminal/updates/4.0"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
