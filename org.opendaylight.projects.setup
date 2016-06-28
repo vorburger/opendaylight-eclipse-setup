@@ -224,6 +224,14 @@
           key="/instance/org.sonarlint.eclipse.ui/markerSeverity">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.ui.monitoring/long_event_error_threshold">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.eclipse.ui.monitoring/long_event_warning_threshold">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -428,6 +436,14 @@
     <setupTask
         xsi:type="setup:CompoundTask"
         name="org.eclipse.ui.monitoring">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.monitoring/long_event_error_threshold"
+          value="3000"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.monitoring/long_event_warning_threshold"
+          value="1500"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.monitoring/monitoring_enabled"
