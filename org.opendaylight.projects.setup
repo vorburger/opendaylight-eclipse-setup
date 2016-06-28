@@ -256,6 +256,22 @@
           key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.save_dirty_editors_before_launch">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/de.loskutov.anyedit.AnyEditTools/org.eclipse.jdt.ui.editor.tab.width">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/de.loskutov.anyedit.AnyEditTools/saveAndFixLineDelimiters">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/de.loskutov.anyedit.AnyEditTools/saveAndAddLine">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/de.loskutov.anyedit.AnyEditTools/saveAndConvert">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -263,6 +279,26 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/com.basistech.m2e.code.quality.checkstyle/eclipseCheckstyleGenerateFormatterSettings"
+          value="true"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="de.loskutov.anyedit.AnyEditTools">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/de.loskutov.anyedit.AnyEditTools/org.eclipse.jdt.ui.editor.tab.width"
+          value="4"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/de.loskutov.anyedit.AnyEditTools/saveAndAddLine"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/de.loskutov.anyedit.AnyEditTools/saveAndConvert"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/de.loskutov.anyedit.AnyEditTools/saveAndFixLineDelimiters"
           value="true"/>
     </setupTask>
     <setupTask
