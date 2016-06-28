@@ -252,6 +252,10 @@
           key="/instance/com.basistech.m2e.code.quality.checkstyle/eclipseCheckstyleGenerateFormatterSettings">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.save_dirty_editors_before_launch">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -284,6 +288,14 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.compare/org.eclipse.compare.IgnoreWhitespace"
           value="false"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.debug.ui">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.save_dirty_editors_before_launch"
+          value="always"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
