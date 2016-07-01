@@ -125,10 +125,6 @@ Until the Gerrits listed below get merged, you can locally work around these pro
 * https://git.opendaylight.org/gerrit/#/c/38059/
 * https://git.opendaylight.org/gerrit/#/c/38061/
 
-===== yangide
-
-* https://git.opendaylight.org/gerrit/#/c/38159/
-
 
 ==== Implementation
 
