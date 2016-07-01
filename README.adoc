@@ -24,7 +24,7 @@ If you already have OpenDaylight projects git clone with existing local work, th
 "${installation.location/git/}${@id.remoteURI|gitRepository}" by something like
 "/absolute/path/where/you/keep/your/opendaylight/clones/${@id.remoteURI|gitRepository}".
 
-In order to be able to propose changes to OpenDaylight via Gerrit, you'll of couse still need to your SSH public key to the ODL Gerrit account.  Note that this setup currently does the git clone via ssh:// not via https:// Git protocol.
+In order to be able to propose changes to OpenDaylight via Gerrit, you'll of couse still need to your SSH public key to the ODL Gerrit account.  Note that this setup currently does the git clone via ssh:// not via https:// Git protocol.  (If this is a problem for you perhaps because from behing a corporate firewall you can also do git with HTTP but not SSH, then please raise bring it up on the odl-parent mailing list, as it would be possible to improve this.)
 
 To import more projects after completing the wizard, click on the "Perform Setup Tasks" yellow/blue circle arrows kind of icon in the Toolbar, next to the little blue man icon, and choose "Import Projects...".  If those two icons are not visible in your toolbar, enable them using menu Window > Preferences > Oomph > Setup Tasks: [X] Show Toolbar contributions.
 
