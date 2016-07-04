@@ -92,6 +92,9 @@ Why do I not see OpenDaylight.org in the Projects lists, only the Eclipse & GitH
 What to do when getting installation ERRORS such as "org.eclipse.equinox.p2.transport.ecf code=1002 Unable to read repository at http://..." with "org.apache.http.conn.ConnectTimeoutException: Connect to ... timed out" etc.::
   These are "just" network connection issues which can happen when it's downloading the additional Eclipse plugins that are required. Normally just retrying, or waiting and retrying later, fixes all of these. If you have managed to previously have it already successfully install the required Eclipse plugins at least once, then you can often still proceed in the face of such errors simply by clicking the Offline icon on the toolbar, or by un-checking the P2 Director task in the "tasks to be executed and optionally uncheck unwanted tasks" pop-up confirmation dialog.  Also if it ever asks you something like "Can't reach ... use locally cached version?", say Yes.
 
+Why doesn't the SonarCube (SonarLint) plugin show the same problems in Eclipse as on the https://sonar.opendaylight.org web UI?
+  It does - IFF you right-click project(s) to "Bind to a SonarCube project" AND then touch a Java file or rebuild the project!
+
 Wouldn't it be better to disable automatic rebuilding?::
   No, because then when switching branches the Java index used for validation and autocompletion would be out-of-date.
 
