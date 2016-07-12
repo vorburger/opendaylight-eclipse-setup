@@ -741,7 +741,7 @@
     <requirement
         name="org.eclipse.egerrit.feature.feature.group"/>
     <requirement
-        name="org.eclipse.xtend.ide"
+        name="org.eclipse.xtend.sdk.feature.group"
         versionRange="[2.9.0,2.10.0)"/>
     <requirement
         name="org.sonatype.tycho.m2e.feature.feature.group"/>
