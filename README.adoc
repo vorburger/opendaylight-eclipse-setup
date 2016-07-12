@@ -6,7 +6,7 @@ Watch https://www.youtube.com/watch?v=TU1zjytlwFE  recording of presentation fro
 
 OpenDaylight has Oomph, and you can set up an Eclipse-based development workspace for OpenDaylight projects by:
 
-1. Downloading the Eclipse Installer from https://www.eclipse.org/downloads/ and starting it.
+1. Downloading the Eclipse Installer from https://www.eclipse.org/downloads/ and clicking "Get Eclipse [Neon] Download 64 bit", unzipping eclipse-inst-* and starting it.  (Alternatively the same, perhaps in a slightly more up-to-date version, is available from https://wiki.eclipse.org/Eclipse_Installer as well.)
 2. On the initial page, click on the *Switch to advanced mode* button in the top right.
 3. On the *Product* page, select *Eclipse IDE for Java Developers*.
 4. On the *Projects* page, collapse the *Eclipse Projects* & *GitHub Projects* to scroll down to the *OpenDaylight.org Projects* (or use the "Select Catalogs" icon in the upper right hand corner for permanent filtering)
@@ -23,6 +23,8 @@ By default, it will git clone the repos of all projects you clicked into your ne
 If you already have OpenDaylight projects git clone with existing local work, then simply on the "Variables" step of the Eclipse Installer, click [X] Show all variables, and replace the "Git clone location:" variable which defaults to
 "${installation.location/git/}${@id.remoteURI|gitRepository}" by something like
 "/absolute/path/where/you/keep/your/opendaylight/clones/${@id.remoteURI|gitRepository}".
+
+Similarly, if for some reason you prefer a non-standard directory layout setup with custom directories instead of Oomph's default git/, ws/ and eclipse/ directories, this can be changed during setup on the "Variables" step by clicking [X] Show all variables.
 
 In order to be able to propose changes to OpenDaylight via Gerrit, you'll of couse still need to your SSH public key to the ODL Gerrit account.  Note that this setup currently does the git clone via ssh:// not via https:// Git protocol.  (If this is a problem for you perhaps because from behing a corporate firewall you can also do git with HTTP but not SSH, then please raise bring it up on the odl-parent mailing list, as it would be possible to improve this.)
 
