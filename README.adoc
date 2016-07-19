@@ -85,6 +85,9 @@ Specific setup actions required by particular projects:
 ==== FAQ
 
 [qanda]
+Where can I get support if I have any further question not covered in this README?::
+  For now, please post to the general OpenDaylight development list (dev@lists.opendaylight.org) with email subject topic prefix "[eclipse]".
+
 Why do I not see the "Projects" lists, only the "Product" selection?::
   Switch the Advanced Mode, and Click Next; watch https://youtu.be/BLW8aOh6WeQ?t=1m42s
 
