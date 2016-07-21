@@ -296,6 +296,10 @@
           key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.methodParameters">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.core.resources/refresh.enabled">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -348,6 +352,14 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.compare/org.eclipse.compare.IgnoreWhitespace"
           value="false"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.core.resources">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.core.resources/refresh.enabled"
+          value="true"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
