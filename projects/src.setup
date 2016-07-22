@@ -19,14 +19,6 @@
     <description>git clone git.opendaylight.org:29418/src</description>
   </setupTask>
   <setupTask
-      xsi:type="maven:MavenImportTask"
-      id="import.maven"
-      projectNameTemplate="[groupId].[artifactId]">
-    <sourceLocator
-        rootFolder="${git.clone.opendaylight.src.location}"
-        locateNestedProjects="true"/>
-  </setupTask>
-  <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">
     <workingSet
         name="src">
@@ -34,6 +26,14 @@
           xsi:type="predicates:LocationPredicate"
           pattern="${git.clone.opendaylight.src.location}.*"/>
     </workingSet>
+  </setupTask>
+  <setupTask
+      xsi:type="maven:MavenImportTask"
+      id="import.maven"
+      projectNameTemplate="[groupId].[artifactId]">
+    <sourceLocator
+        rootFolder="${git.clone.opendaylight.src.location}"
+        locateNestedProjects="true"/>
   </setupTask>
   <stream name="master"/>
   <logicalProjectContainer

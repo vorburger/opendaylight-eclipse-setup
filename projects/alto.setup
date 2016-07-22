@@ -19,14 +19,6 @@
     <description>git clone git.opendaylight.org:29418/alto</description>
   </setupTask>
   <setupTask
-      xsi:type="maven:MavenImportTask"
-      id="import.maven"
-      projectNameTemplate="[groupId].[artifactId]">
-    <sourceLocator
-        rootFolder="${git.clone.opendaylight.alto.location}"
-        locateNestedProjects="true"/>
-  </setupTask>
-  <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">
     <workingSet
         name="alto">
@@ -34,6 +26,14 @@
           xsi:type="predicates:LocationPredicate"
           pattern="${git.clone.opendaylight.alto.location}.*"/>
     </workingSet>
+  </setupTask>
+  <setupTask
+      xsi:type="maven:MavenImportTask"
+      id="import.maven"
+      projectNameTemplate="[groupId].[artifactId]">
+    <sourceLocator
+        rootFolder="${git.clone.opendaylight.alto.location}"
+        locateNestedProjects="true"/>
   </setupTask>
   <stream name="master"/>
   <logicalProjectContainer

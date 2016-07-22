@@ -19,14 +19,6 @@
     <description>git clone git.opendaylight.org:29418/yang-push</description>
   </setupTask>
   <setupTask
-      xsi:type="maven:MavenImportTask"
-      id="import.maven"
-      projectNameTemplate="[groupId].[artifactId]">
-    <sourceLocator
-        rootFolder="${git.clone.opendaylight.yang-push.location}"
-        locateNestedProjects="true"/>
-  </setupTask>
-  <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">
     <workingSet
         name="yang-push">
@@ -34,6 +26,14 @@
           xsi:type="predicates:LocationPredicate"
           pattern="${git.clone.opendaylight.yang-push.location}.*"/>
     </workingSet>
+  </setupTask>
+  <setupTask
+      xsi:type="maven:MavenImportTask"
+      id="import.maven"
+      projectNameTemplate="[groupId].[artifactId]">
+    <sourceLocator
+        rootFolder="${git.clone.opendaylight.yang-push.location}"
+        locateNestedProjects="true"/>
   </setupTask>
   <stream name="master"/>
   <logicalProjectContainer

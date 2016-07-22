@@ -28,14 +28,6 @@ class ProjectsSetupGenerator {
             <description>git clone git.opendaylight.org:29418/«projectName»</description>
           </setupTask>
           <setupTask
-              xsi:type="maven:MavenImportTask"
-              id="import.maven"
-              projectNameTemplate="[groupId].[artifactId]">
-            <sourceLocator
-                rootFolder="${git.clone.opendaylight.«validId(projectName)».location}"
-                locateNestedProjects="true"/>
-          </setupTask>
-          <setupTask
               xsi:type="setup.workingsets:WorkingSetTask">
             <workingSet
                 name="«projectName»">
@@ -43,6 +35,14 @@ class ProjectsSetupGenerator {
                   xsi:type="predicates:LocationPredicate"
                   pattern="${git.clone.opendaylight.«validId(projectName)».location}.*"/>
             </workingSet>
+          </setupTask>
+          <setupTask
+              xsi:type="maven:MavenImportTask"
+              id="import.maven"
+              projectNameTemplate="[groupId].[artifactId]">
+            <sourceLocator
+                rootFolder="${git.clone.opendaylight.«validId(projectName)».location}"
+                locateNestedProjects="true"/>
           </setupTask>
           <stream name="master"/>
           <logicalProjectContainer
@@ -60,11 +60,11 @@ class ProjectsSetupGenerator {
 
     def writeProjectSetup(String projectName) {
         val projectSetupText = generateProjectSetup(projectName)
-        val projectSetupFile = new File("../projects/" + projectName + ".setup") 
+        val projectSetupFile = new File("../projects/" + projectName + ".setup")
         projectSetupFile.parentFile.mkdirs
         Files.write(projectSetupText, projectSetupFile, Charsets.UTF_8)
     }
-    
+
     def writeAllProjectsSetup(File projectsListFile) {
         for (line : Files.readLines(projectsListFile, Charsets.UTF_8)) {
             val trimline = line.trim()
@@ -73,12 +73,12 @@ class ProjectsSetupGenerator {
                println('''  <project href="projects/«trimline».setup#/"/>''')
             }
         }
-    } 
+    }
 
     def static void main(String[] args) {
         val generateProjectSetup = new ProjectsSetupGenerator()
         // generateProjectSetup.writeProjectSetup("lispflowmapping")
         generateProjectSetup.writeAllProjectsSetup(new File("projects.txt"))
     }
-    
+
 }
