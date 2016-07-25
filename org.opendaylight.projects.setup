@@ -316,6 +316,14 @@
           key="/instance/net.sf.eclipsecs.core/include.module.ids">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/de.loskutov.anyedit.AnyEditTools/fixLineDelimiters">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/de.loskutov.anyedit.AnyEditTools/replaceAllTabs">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -330,8 +338,16 @@
         name="de.loskutov.anyedit.AnyEditTools">
       <setupTask
           xsi:type="setup:PreferenceTask"
+          key="/instance/de.loskutov.anyedit.AnyEditTools/fixLineDelimiters"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
           key="/instance/de.loskutov.anyedit.AnyEditTools/org.eclipse.jdt.ui.editor.tab.width"
           value="4"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/de.loskutov.anyedit.AnyEditTools/replaceAllTabs"
+          value="true"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/de.loskutov.anyedit.AnyEditTools/saveAndAddLine"
