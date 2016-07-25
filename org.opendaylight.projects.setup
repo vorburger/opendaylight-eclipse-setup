@@ -324,6 +324,10 @@
           key="/instance/de.loskutov.anyedit.AnyEditTools/replaceAllTabs">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.m2e.core/eclipse.m2.defaultPomEditorPage">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -583,6 +587,10 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.m2e.core/eclipse.m2.autoUpdateProjects"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.m2e.core/eclipse.m2.defaultPomEditorPage"
           value="true"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
