@@ -491,7 +491,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/content_assist_favorite_static_members"
-          value="org.hamcrest.CoreMatchers.*;org.junit.matchers.JUnitMatchers.*;org.junit.Assume.*;org.junit.Assert.*;org.mockito.Matchers.*;org.hamcrest.Matchers.*"/>
+          value="org.hamcrest.CoreMatchers.*;org.hamcrest.Matchers.*;org.junit.matchers.JUnitMatchers.*;org.junit.Assume.*;org.junit.Assert.*;org.mockito.Matchers.*;com.google.common.truth.Truth.*"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/editor_save_participant_org.eclipse.jdt.ui.postsavelistener.cleanup"
