@@ -16,6 +16,7 @@ docs
 faas
 genius
 groupbasedpolicy
+infrautils
 integration/distribution
 integration/packaging
 integration/test

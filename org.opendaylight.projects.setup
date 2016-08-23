@@ -1312,6 +1312,7 @@
   <project href="projects/faas.setup#/"/>
   <project href="projects/genius.setup#/"/>
   <project href="projects/groupbasedpolicy.setup#/"/>
+  <project href="projects/infrautils.setup#/"/>
   <project href="projects/integration/distribution.setup#/"/>
   <project href="projects/integration/packaging.setup#/"/>
   <project href="projects/integration/test.setup#/"/>
