@@ -504,6 +504,26 @@
           key="/instance/org.eclipse.jdt.ui/sp_cleanup.add_missing_annotations">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.filter_get">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.filter_setters">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.eclipse.debug.core/org.eclipse.debug.core.USE_STEP_FILTERS">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.active_filters">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.inactive_filters">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -595,6 +615,14 @@
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
+        name="org.eclipse.debug.core">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.debug.core/org.eclipse.debug.core.USE_STEP_FILTERS"
+          value="true"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
         name="org.eclipse.debug.ui">
       <setupTask
           xsi:type="setup:PreferenceTask"
@@ -660,6 +688,26 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.incompleteClasspath"
           value="error"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.jdt.debug.ui">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.active_filters"
+          value="com.ibm.*,com.sun.*,java.*,javax.*,jrockit.*,org.omg.*,sun.*,sunw.*,java.lang.ClassLoader,org.eclipse.xtend2.lib.StringConcatenation"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.filter_get"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.filter_setters"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.inactive_filters"
+          value=""/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
