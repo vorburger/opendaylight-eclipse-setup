@@ -97,7 +97,7 @@ Why do I not see OpenDaylight.org in the Projects lists, only the Eclipse & GitH
 What to do when getting installation ERRORS such as "org.eclipse.equinox.p2.transport.ecf code=1002 Unable to read repository at http://..." with "org.apache.http.conn.ConnectTimeoutException: Connect to ... timed out" etc.::
   These are "just" network connection issues which can happen when it's downloading the additional Eclipse plugins that are required. Normally just retrying, or waiting and retrying later, fixes all of these. If you have managed to previously have it already successfully install the required Eclipse plugins at least once, then you can often still proceed in the face of such errors simply by clicking the Offline icon on the toolbar, or by un-checking the P2 Director task in the "tasks to be executed and optionally uncheck unwanted tasks" pop-up confirmation dialog.  Also if it ever asks you something like "Can't reach ... use locally cached version?", say Yes.
 
-Why doesn't the SonarCube (SonarLint) plugin show the same problems in Eclipse as on the https://sonar.opendaylight.org web UI?
+Why doesn't the SonarCube (SonarLint) plugin show the same problems in Eclipse as on the https://sonar.opendaylight.org web UI?::
   It does - IFF you right-click project(s) to "Bind to a SonarCube project" AND then touch a Java file or rebuild the project!
 
 Wouldn't it be better to disable automatic rebuilding?::
@@ -121,17 +121,13 @@ Until the Gerrits listed below get merged, you can locally work around these pro
 
 * The "javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target" error while fetching url https://nexus.opendaylight.org/content/sites/p2repos/org.opendaylight.yangide/snapshot/content.xml: You have been hit by https://bugs.opendaylight.org/show_bug.cgi?id=5806.  It appears that OpenJDK does not have this problem; it's specific to Oracle JDK.  You can also try to import the respective CA cert into your store as described e.g. https://bugs.eclipse.org/bugs/show_bug.cgi?id=492014#c1 and in other places online, if you are up for it.  The only other thing I can do is encourage you to whine about that issue on e.g. the integration-dev@lists.opendaylight.org and/or dev@lists.opendaylight.org mailing lists, and comment and vote for it on that bugzilla issue.
 
-* YANG code generation still requires manual mvn install after first git clone.  This will be fixed once the yangide plugin which auto-generates YANG code will be bundled by this setup model; pending https://bugs.opendaylight.org/show_bug.cgi?id=5798 & https://git.opendaylight.org/gerrit/#/c/38169/.
+* YANG code generation does not seem to always automatically correctly incrementally rebuild Java sources from YANG (e.g. when switching branches). For now, just manually right-click > Run As > Maven Generate Sources does the trick in cases where you have red errors due to YANG code.
 
 * Checkstyle
-** version of Checkstyle JAR used in Maven and Eclipse plug-in have to be made to match, see https://git.opendaylight.org/gerrit/#/c/37801/ and https://git.opendaylight.org/gerrit/#/c/37796/ and https://git.opendaylight.org/gerrit/#/c/38211/; and keep matched (unless https://sourceforge.net/p/eclipse-cs/feature-requests/158/ is implemented)
 ** OpenDaylight custom Checkstyle checks from org.opendaylight.yangtools.checkstyle-logging (used e.g. in AAA) cause issues; need to either write a new Eclipse plugin just for that (urgh), or contribute https://sourceforge.net/p/eclipse-cs/feature-requests/159/.
+** version of Checkstyle JAR used in Maven and Eclipse plug-in will have to be kept matching (unless https://sourceforge.net/p/eclipse-cs/feature-requests/158/ is ever implemented)
 
 
-===== vpnservice
-
-* https://git.opendaylight.org/gerrit/#/c/38059/
-* https://git.opendaylight.org/gerrit/#/c/38061/
 
 
 ==== Implementation
