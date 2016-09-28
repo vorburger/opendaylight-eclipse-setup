@@ -1264,10 +1264,6 @@
         name="AnyEditTools.feature.group"/>
     <requirement
         name="com.mousefeed.feature.feature.group"/>
-    <requirement
-        name="org.sonarlint.eclipse.feature.feature.group"/>
-    <requirement
-        name="org.sonarlint.eclipse.jdt.feature.feature.group"/>
     <repository
         url="http://update.eclemma.org"/>
     <repository
@@ -1314,8 +1310,6 @@
         url="http://andrei.gmxhome.de/eclipse/"/>
     <repository
         url="http://download.sigasi.com/updates/mousefeed"/>
-    <repository
-        url="http://eclipse.sonarlint.org/"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
