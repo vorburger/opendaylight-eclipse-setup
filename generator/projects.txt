@@ -57,6 +57,6 @@ usc
 usecplugin
 vpnservice
 vtn
-yangide
+# yangide
 yang-push
 yangtools

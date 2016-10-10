@@ -1395,7 +1395,7 @@
   <project href="projects/usecplugin.setup#/"/>
   <project href="projects/vpnservice.setup#/"/>
   <project href="projects/vtn.setup#/"/>
-  <project href="projects/yangide.setup#/"/>
+  <project href="projects_no-re-gen/yangide.setup#/"/>
   <project href="projects/yang-push.setup#/"/>
   <project href="projects/yangtools.setup#/"/>
   <description>OpenDaylight is leading the transformation to Open Software Defined Networking (SDN). This catalog lists all projects at opendaylight.org that provide automated Eclipse workspace setup support.</description>
