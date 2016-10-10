@@ -35,6 +35,12 @@
         rootFolder="${git.clone.opendaylight.yangide.location}"
         locateNestedProjects="true"/>
   </setupTask>
+  <setupTask
+      xsi:type="pde:TargetPlatformTask"
+      name="YANG IDE Target Platform"
+      activate="true">
+    <description></description>
+  </setupTask>
   <stream name="master"/>
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
