@@ -1264,6 +1264,8 @@
         name="AnyEditTools.feature.group"/>
     <requirement
         name="com.mousefeed.feature.feature.group"/>
+    <requirement
+        name="org.jboss.tools.m2e.jdt.feature.feature.group"/>
     <repository
         url="http://update.eclemma.org"/>
     <repository
@@ -1310,6 +1312,8 @@
         url="http://andrei.gmxhome.de/eclipse/"/>
     <repository
         url="http://download.sigasi.com/updates/mousefeed"/>
+    <repository
+        url="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-jdt-compiler/"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
