@@ -47,8 +47,8 @@ Provision an Eclipse installation which includes:
 * some custom Preferences, including: Organize Import, Auto Save actions, Java & XML Formatter, EGit Signed off, etc.
 * pre-installing the appropriate versions of the following useful Eclipse plugins:
 ** https://www.eclipse.org/xtend/
-** https://wiki.eclipse.org/Linux_Tools_Project/Docker_Tooling/User_Guide
-** https://wiki.eclipse.org/Linux_Tools_Project/Vagrant_Tooling/User_Guide
+** _https://wiki.eclipse.org/Linux_Tools_Project/Docker_Tooling/User_Guide - https://www.eclipse.org/forums/index.php?t=msg&th=1081849)[removed due to p2 issues]_
+** _https://wiki.eclipse.org/Linux_Tools_Project/Vagrant_Tooling/User_Guide - https://www.eclipse.org/forums/index.php?t=msg&th=1081849)[removed due to p2 issues]_
 ** http://eclipse-cs.sourceforge.net
 ** http://findbugs.sourceforge.net
 ** https://pmd.github.io

@@ -1235,10 +1235,6 @@
     <requirement
         name="org.infinitest.eclipse.feature.feature.group"/>
     <requirement
-        name="org.eclipse.linuxtools.docker.feature.feature.group"/>
-    <requirement
-        name="org.eclipse.linuxtools.vagrant.feature.feature.group"/>
-    <requirement
         name="org.eclipse.emf.compare.feature.group"/>
     <requirement
         name="org.eclipse.mylyn.wikitext.extras.feature.group"/>
@@ -1288,8 +1284,6 @@
         url="http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.9.0/N/LATEST/"/>
     <repository
         url="https://infinitest.github.io"/>
-    <repository
-        url="http://download.eclipse.org/linuxtools/updates-docker-nightly/"/>
     <repository
         url="http://download.eclipse.org/modeling/emf/compare/updates/releases/latest"/>
     <repository
