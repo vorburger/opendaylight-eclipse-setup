@@ -1271,7 +1271,7 @@
     <repository
         url="http://findbugs.cs.umd.edu/eclipse-daily/"/>
     <repository
-        url="http://sourceforge.net/projects/pmd/files/pmd-eclipse/update-site/"/>
+        url="https://sourceforge.net/projects/pmd/files/pmd-eclipse/update-site/"/>
     <repository
         url="http://ifedorenko.github.com/m2e-extras/"/>
     <repository
