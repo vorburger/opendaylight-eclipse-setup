@@ -5,10 +5,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:git="http://www.eclipse.org/oomph/setup/git/1.0"
     xmlns:jdt="http://www.eclipse.org/oomph/setup/jdt/1.0"
-    xmlns:pde="http://www.eclipse.org/oomph/setup/pde/1.0"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
-    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/setup/pde/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/PDE.ecore"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore"
     name="org.opendaylight"
     label="OpenDaylight.org">
   <annotation
@@ -1330,6 +1329,20 @@
       <substitution>${workspace.location|path}</substitution>
     </modification>
   </setupTask>
+  <project name="empty"
+      label="(No Projects)"
+      logicalProjectContainer="/">
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.empty"
+        location="${installation.location/git/}empty"
+        remoteURI="https://github.com/vorburger/empty.git">
+      <description>git clone https://github.com/vorburger/empty.git</description>
+    </setupTask>
+    <stream
+        name="master"/>
+    <description>Check this if you want the opendaylight-eclipse-setup IDE base, but prefer to git clone and import etc. the ODL projects yourself</description>
+  </project>
   <project href="projects/aaa.setup#/"/>
   <project href="projects/alto.setup#/"/>
   <project href="projects/atrium.setup#/"/>
