@@ -14,9 +14,20 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.infrautils"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/infrautils.git"
+      remoteURI="infrautils.git"
       location="${installation.location/git/}infrautils">
-    <description>git clone git.opendaylight.org:29418/infrautils</description>
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/InducedChoices">
+      <detail
+          key="inherit">
+        <value>opendaylight.gerrit.remoteURIs</value>
+      </detail>
+      <detail
+          key="target">
+        <value>remoteURI</value>
+      </detail>
+    </annotation>
+    <description>git clone infrautils</description>
   </setupTask>
   <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">

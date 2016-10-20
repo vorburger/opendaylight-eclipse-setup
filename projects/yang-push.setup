@@ -14,9 +14,20 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.yang-push"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/yang-push.git"
+      remoteURI="yang-push.git"
       location="${installation.location/git/}yang-push">
-    <description>git clone git.opendaylight.org:29418/yang-push</description>
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/InducedChoices">
+      <detail
+          key="inherit">
+        <value>opendaylight.gerrit.remoteURIs</value>
+      </detail>
+      <detail
+          key="target">
+        <value>remoteURI</value>
+      </detail>
+    </annotation>
+    <description>git clone yang-push</description>
   </setupTask>
   <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">

@@ -37,6 +37,27 @@
         xsi:type="setup:VariableTask"
         name="opendaylight.gerrit.uri.pattern"
         value="(https|ssh)://([^@/]+@)?(git.opendaylight.org:29418/.*|git.opendaylight.org/gerrit/.*)"/>
+    <setupTask
+        xsi:type="setup:VariableTask"
+        name="opendaylight.gerrit.remoteURIs"
+        label="OpenDaylight Gerrit Repository">
+      <choice
+          value="https://git.opendaylight.org/gerrit/@{remoteURI}"
+          label="HTTPS (read-only, anonymous, Gerrit)"/>
+      <choice
+          value="ssh://${opendaylight.user.id|username}@git.opendaylight.org:29418/@{remoteURI}"
+          label="SSH (read-write, Gerrit)">
+        <annotation
+            source="http://www.eclipse.org/oomph/setup/MatchChoice"/>
+      </choice>
+      <choice
+          value="https://${opendaylight.user.id|username}@git.opendaylight.org/gerrit/a/@{remoteURI}"
+          label="HTTPS (read-write, Gerrit)">
+        <annotation
+            source="http://www.eclipse.org/oomph/setup/MatchChoice"/>
+      </choice>
+      <description>Choose from the available remote Gerrit URIs</description>
+    </setupTask>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
@@ -1311,8 +1332,19 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.odlparent"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/odlparent.git">
-    <description>git clone git.opendaylight.org:29418/odlparent</description>
+      remoteURI="odlparent.git">
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/InducedChoices">
+      <detail
+          key="inherit">
+        <value>opendaylight.gerrit.remoteURIs</value>
+      </detail>
+      <detail
+          key="target">
+        <value>remoteURI</value>
+      </detail>
+    </annotation>
+    <description>git clone odlparent</description>
   </setupTask>
   <setupTask
       xsi:type="setup:WorkspaceTask"

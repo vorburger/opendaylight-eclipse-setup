@@ -14,9 +14,20 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.l2switch"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/l2switch.git"
+      remoteURI="l2switch.git"
       location="${installation.location/git/}l2switch">
-    <description>git clone git.opendaylight.org:29418/l2switch</description>
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/InducedChoices">
+      <detail
+          key="inherit">
+        <value>opendaylight.gerrit.remoteURIs</value>
+      </detail>
+      <detail
+          key="target">
+        <value>remoteURI</value>
+      </detail>
+    </annotation>
+    <description>git clone l2switch</description>
   </setupTask>
   <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">

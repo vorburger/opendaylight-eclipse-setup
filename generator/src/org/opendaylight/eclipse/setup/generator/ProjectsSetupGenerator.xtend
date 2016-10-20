@@ -23,9 +23,20 @@ class ProjectsSetupGenerator {
           <setupTask
               xsi:type="git:GitCloneTask"
               id="git.clone.opendaylight.«validId(projectName)»"
-              remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/«projectName».git"
+              remoteURI="«projectName».git"
               location="${installation.location/git/}«projectName»">
-            <description>git clone git.opendaylight.org:29418/«projectName»</description>
+            <annotation
+                source="http://www.eclipse.org/oomph/setup/InducedChoices">
+              <detail
+                  key="inherit">
+                <value>opendaylight.gerrit.remoteURIs</value>
+              </detail>
+              <detail
+                  key="target">
+                <value>remoteURI</value>
+              </detail>
+            </annotation>
+            <description>git clone «projectName»</description>
           </setupTask>
           <setupTask
               xsi:type="setup.workingsets:WorkingSetTask">

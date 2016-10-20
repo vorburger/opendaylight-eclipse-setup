@@ -14,9 +14,20 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.capwap"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/capwap.git"
+      remoteURI="capwap.git"
       location="${installation.location/git/}capwap">
-    <description>git clone git.opendaylight.org:29418/capwap</description>
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/InducedChoices">
+      <detail
+          key="inherit">
+        <value>opendaylight.gerrit.remoteURIs</value>
+      </detail>
+      <detail
+          key="target">
+        <value>remoteURI</value>
+      </detail>
+    </annotation>
+    <description>git clone capwap</description>
   </setupTask>
   <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">

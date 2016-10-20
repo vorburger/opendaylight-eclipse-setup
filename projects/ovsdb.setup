@@ -14,9 +14,20 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.ovsdb"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/ovsdb.git"
+      remoteURI="ovsdb.git"
       location="${installation.location/git/}ovsdb">
-    <description>git clone git.opendaylight.org:29418/ovsdb</description>
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/InducedChoices">
+      <detail
+          key="inherit">
+        <value>opendaylight.gerrit.remoteURIs</value>
+      </detail>
+      <detail
+          key="target">
+        <value>remoteURI</value>
+      </detail>
+    </annotation>
+    <description>git clone ovsdb</description>
   </setupTask>
   <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">

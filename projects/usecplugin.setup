@@ -14,9 +14,20 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.usecplugin"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/usecplugin.git"
+      remoteURI="usecplugin.git"
       location="${installation.location/git/}usecplugin">
-    <description>git clone git.opendaylight.org:29418/usecplugin</description>
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/InducedChoices">
+      <detail
+          key="inherit">
+        <value>opendaylight.gerrit.remoteURIs</value>
+      </detail>
+      <detail
+          key="target">
+        <value>remoteURI</value>
+      </detail>
+    </annotation>
+    <description>git clone usecplugin</description>
   </setupTask>
   <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">

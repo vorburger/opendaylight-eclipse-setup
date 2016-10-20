@@ -14,9 +14,20 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.atrium"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/atrium.git"
+      remoteURI="atrium.git"
       location="${installation.location/git/}atrium">
-    <description>git clone git.opendaylight.org:29418/atrium</description>
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/InducedChoices">
+      <detail
+          key="inherit">
+        <value>opendaylight.gerrit.remoteURIs</value>
+      </detail>
+      <detail
+          key="target">
+        <value>remoteURI</value>
+      </detail>
+    </annotation>
+    <description>git clone atrium</description>
   </setupTask>
   <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">

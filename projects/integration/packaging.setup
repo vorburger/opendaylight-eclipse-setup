@@ -14,9 +14,20 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.integration_packaging"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/integration/packaging.git"
+      remoteURI="integration/packaging.git"
       location="${installation.location/git/}integration/packaging">
-    <description>git clone git.opendaylight.org:29418/integration/packaging</description>
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/InducedChoices">
+      <detail
+          key="inherit">
+        <value>opendaylight.gerrit.remoteURIs</value>
+      </detail>
+      <detail
+          key="target">
+        <value>remoteURI</value>
+      </detail>
+    </annotation>
+    <description>git clone integration/packaging</description>
   </setupTask>
   <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">

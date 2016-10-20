@@ -14,9 +14,20 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.openflowjava"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/openflowjava.git"
+      remoteURI="openflowjava.git"
       location="${installation.location/git/}openflowjava">
-    <description>git clone git.opendaylight.org:29418/openflowjava</description>
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/InducedChoices">
+      <detail
+          key="inherit">
+        <value>opendaylight.gerrit.remoteURIs</value>
+      </detail>
+      <detail
+          key="target">
+        <value>remoteURI</value>
+      </detail>
+    </annotation>
+    <description>git clone openflowjava</description>
   </setupTask>
   <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">

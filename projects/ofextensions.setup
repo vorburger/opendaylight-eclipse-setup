@@ -14,9 +14,20 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.ofextensions"
-      remoteURI="ssh://${opendaylight.user.id}@git.opendaylight.org:29418/ofextensions.git"
+      remoteURI="ofextensions.git"
       location="${installation.location/git/}ofextensions">
-    <description>git clone git.opendaylight.org:29418/ofextensions</description>
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/InducedChoices">
+      <detail
+          key="inherit">
+        <value>opendaylight.gerrit.remoteURIs</value>
+      </detail>
+      <detail
+          key="target">
+        <value>remoteURI</value>
+      </detail>
+    </annotation>
+    <description>git clone ofextensions</description>
   </setupTask>
   <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">
