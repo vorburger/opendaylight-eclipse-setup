@@ -18,6 +18,7 @@ class ProjectsSetupGenerator {
             xmlns:predicates="http://www.eclipse.org/oomph/predicates/1.0"
             xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
             xmlns:setup.workingsets="http://www.eclipse.org/oomph/setup/workingsets/1.0"
+            xmlns:workingsets="http://www.eclipse.org/oomph/workingsets/1.0"
             xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/maven/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Maven.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupWorkingSets.ecore"
             name="«projectName»">
           <setupTask
@@ -43,8 +44,29 @@ class ProjectsSetupGenerator {
             <workingSet
                 name="«projectName»">
               <predicate
-                  xsi:type="predicates:LocationPredicate"
-                  pattern="${git.clone.opendaylight.«validId(projectName)».location}.*"/>
+                  xsi:type="predicates:AndPredicate">
+                <operand
+                    xsi:type="predicates:LocationPredicate"
+                    pattern="${git.clone.opendaylight.«validId(projectName)».location}.*"/>
+                <operand
+                    xsi:type="predicates:NotPredicate">
+                  <operand
+                      xsi:type="predicates:NamePredicate"
+                      pattern="(.*-aggregator$)|(.*-features$)|(.*-artifacts$)|(.*-karaf$)|(.*-parent$)"/>
+                </operand>
+              </predicate>
+            </workingSet>
+            <workingSet
+                name="«projectName»-build">
+              <predicate
+                  xsi:type="predicates:AndPredicate">
+                <operand
+                    xsi:type="predicates:LocationPredicate"
+                    pattern="${git.clone.opendaylight.«validId(projectName)».location}.*"/>
+                <operand
+                    xsi:type="predicates:NamePredicate"
+                    pattern="(.*-aggregator$)|(.*-features$)|(.*-artifacts$)|(.*-karaf$)|(.*-parent$)"/>
+              </predicate>
             </workingSet>
           </setupTask>
           <setupTask
