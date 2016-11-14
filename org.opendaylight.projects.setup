@@ -1381,6 +1381,31 @@
           name="plugins"/>
       <description>https://github.com/oyse/yedit/wiki/Features</description>
     </project>
+
+    <project
+        name="dockervagrant"
+        label="Docker &amp; Vagrant Tooling">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/BrandingInfo">
+        <detail
+            key="siteURI">
+          <value>https://wiki.eclipse.org/Linux_Tools_Project/Docker_Tooling/User_Guide</value>
+        </detail>
+      </annotation>
+      <setupTask
+          xsi:type="setup.p2:P2Task">
+        <requirement
+            name="org.eclipse.linuxtools.docker.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.linuxtools.vagrant.feature.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/linuxtools/updates-docker-nightly/"/>
+      </setupTask>
+      <stream
+          name="plugins"/>
+      <description>https://wiki.eclipse.org/Linux_Tools_Project/Docker_Tooling/User_Guide</description>
+    </project>
+
   </project>
   <project name="empty"
       label="(No Projects)"
