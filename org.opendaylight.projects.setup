@@ -1216,7 +1216,8 @@
       defaultValue="Neon"
       storageURI="scope://Workspace"/>
   <setupTask
-      xsi:type="setup.p2:P2Task">
+      xsi:type="setup.p2:P2Task"
+      label="Mandatory Eclipse Plugins required for OpenDaylight development">
     <requirement
         name="org.eclipse.m2e.feature.feature.group"/>
     <requirement
@@ -1232,11 +1233,7 @@
     <requirement
         name="com.basistech.m2e.code.quality.findbugs.feature.feature.group"/>
     <requirement
-        name="com.basistech.m2e.code.quality.pmd.feature.feature.group"/>
-    <requirement
         name="edu.umd.cs.findbugs.plugin.eclipse.feature.group"/>
-    <requirement
-        name="net.sourceforge.pmd.eclipse.feature.group"/>
     <requirement
         name="com.ifedorenko.m2e.mavendev.feature.feature.group"/>
     <requirement
@@ -1246,37 +1243,13 @@
     <requirement
         name="org.sonatype.m2e.buildhelper.feature.feature.group"/>
     <requirement
-        name="org.eclipse.egerrit.feature.feature.group"/>
-    <requirement
-        name="org.eclipse.xtend.sdk.feature.group"/>
-    <requirement
         name="org.sonatype.tycho.m2e.feature.feature.group"/>
     <requirement
-        name="org.infinitest.eclipse.feature.feature.group"/>
-    <requirement
-        name="org.eclipse.emf.compare.feature.group"/>
-    <requirement
-        name="org.eclipse.mylyn.wikitext.extras.feature.group"/>
-    <requirement
-        name="org.psem2m.eclipse.rest.editor.feature.group"/>
-    <requirement
-        name="org.eclipse.mylyn.gerrit.feature.feature.group"/>
-    <requirement
-        name="org.eclipse.mylyn.bugzilla_feature.feature.group"/>
-    <requirement
-        name="org.eclipse.mylyn.hudson.feature.group"/>
-    <requirement
         name="org.eclipse.graphiti.feature.feature.group"/>
-    <requirement
-        name="org.dadacoalition.yedit.feature.feature.group"/>
-    <requirement
-        name="org.opendaylight.yangide.feature.feature.group"/>
     <requirement
         name="org.jboss.tools.maven.apt.feature.feature.group"/>
     <requirement
         name="AnyEditTools.feature.group"/>
-    <requirement
-        name="com.mousefeed.feature.feature.group"/>
     <requirement
         name="org.jboss.tools.m2e.jdt.feature.feature.group"/>
     <repository
@@ -1288,41 +1261,19 @@
     <repository
         url="http://findbugs.cs.umd.edu/eclipse-daily/"/>
     <repository
-        url="https://sourceforge.net/projects/pmd/files/pmd-eclipse/update-site/"/>
-    <repository
         url="http://ifedorenko.github.com/m2e-extras/"/>
     <repository
         url="https://otto.takari.io/content/sites/m2e.extras/m2eclipse-buildhelper/0.15.0/N/0.15.0.201405280027/"/>
     <repository
-        url="http://download.eclipse.org/egerrit/updates/integration"/>
-    <repository
-        url="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
-    <repository
         url="http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.9.0/N/LATEST/"/>
-    <repository
-        url="https://infinitest.github.io"/>
-    <repository
-        url="http://download.eclipse.org/modeling/emf/compare/updates/releases/latest"/>
-    <repository
-        url="http://download.eclipse.org/mylyn/snapshots/nightly/docs/"/>
-    <repository
-        url="http://resteditor.sourceforge.net/eclipse"/>
-    <repository
-        url="http://download.eclipse.org/mylyn/releases/latest"/>
     <repository
         url="http://download.eclipse.org/technology/m2e/releases"/>
     <repository
         url="http://download.eclipse.org/graphiti/updates/0.12.2"/>
     <repository
-        url="http://dadacoalition.org/yedit"/>
-    <repository
-        url="http://209.132.179.72/job/yangide/lastSuccessfulBuild/artifact/product/update-site/target/repository/"/>
-    <repository
         url="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt"/>
     <repository
         url="http://andrei.gmxhome.de/eclipse/"/>
-    <repository
-        url="http://download.sigasi.com/updates/mousefeed"/>
     <repository
         url="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-jdt-compiler/"/>
   </setupTask>
@@ -1359,6 +1310,204 @@
       <substitution>${workspace.location|path}</substitution>
     </modification>
   </setupTask>
+  <project name="xtra.plugins"
+      label="Additional optional Eclipse plugins for OpenDaylight development">
+    <project
+        name="xtend"
+        label="Xtend Language">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/BrandingInfo">
+        <detail
+            key="siteURI">
+          <value>https://www.eclipse.org/xtend/</value>
+        </detail>
+      </annotation>
+      <setupTask
+          xsi:type="setup.p2:P2Task">
+        <requirement
+            name="org.eclipse.xtend.sdk.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
+      </setupTask>
+      <stream
+          name="plugins"/>
+      <description>https://www.eclipse.org/xtend/</description>
+    </project>
+    <project
+        name="yedit"
+        label="YEdit YAML Editor">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/BrandingInfo">
+        <detail
+            key="siteURI">
+          <value>https://github.com/oyse/yedit/wiki/Features</value>
+        </detail>
+      </annotation>
+      <setupTask
+          xsi:type="setup.p2:P2Task">
+        <requirement
+            name="org.dadacoalition.yedit.feature.feature.group"/>
+        <repository
+            url="http://dadacoalition.org/yedit"/>
+      </setupTask>
+      <stream
+          name="plugins"/>
+      <description>https://github.com/oyse/yedit/wiki/Features</description>
+    </project>
+    <project
+        name="doceditors"
+        label="ReST and AsciiDoc Documentation Markup Editors">
+      <setupTask
+          xsi:type="setup.p2:P2Task">
+        <requirement
+            name="org.eclipse.mylyn.wikitext.extras.feature.group"/>
+        <requirement
+            name="org.psem2m.eclipse.rest.editor.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/mylyn/snapshots/nightly/docs/"/>
+        <repository
+            url="http://resteditor.sourceforge.net/eclipse"/>
+      </setupTask>
+      <stream
+          name="plugins"/>
+    </project>
+    <project
+        name="pmd"
+        label="PMD">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/BrandingInfo">
+        <detail
+            key="siteURI">
+          <value>https://pmd.github.io</value>
+        </detail>
+      </annotation>
+      <setupTask
+          xsi:type="setup.p2:P2Task">
+        <requirement
+            name="net.sourceforge.pmd.eclipse.feature.group"/>
+        <requirement
+            name="com.basistech.m2e.code.quality.pmd.feature.feature.group"/>
+        <repository
+            url="https://sourceforge.net/projects/pmd/files/pmd-eclipse/update-site/"/>
+      </setupTask>
+      <stream
+          name="plugins"/>
+      <description>PMD's p2 regularly causing issues because SF down :( https://pmd.github.io</description>
+    </project>
+    <project
+        name="infinitest"
+        label="Infinitest">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/BrandingInfo">
+        <detail
+            key="siteURI">
+          <value>https://infinitest.github.io</value>
+        </detail>
+      </annotation>
+      <setupTask
+          xsi:type="setup.p2:P2Task">
+        <requirement
+            name="org.infinitest.eclipse.feature.feature.group"/>
+        <repository
+            url="https://infinitest.github.io"/>
+      </setupTask>
+      <stream
+          name="plugins"/>
+      <description>https://infinitest.github.io/</description>
+    </project>
+    <project
+        name="mousefeed"
+        label="Mousefeed (Keyboard shortcut hints)">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/BrandingInfo">
+        <detail
+            key="siteURI">
+          <value>https://github.com/heeckhau/mousefeed</value>
+        </detail>
+      </annotation>
+      <setupTask
+          xsi:type="setup.p2:P2Task">
+        <requirement
+            name="com.mousefeed.feature.feature.group"/>
+        <repository
+            url="http://download.sigasi.com/updates/mousefeed"/>
+      </setupTask>
+      <stream
+          name="plugins"/>
+      <description>https://github.com/heeckhau/mousefeed</description>
+    </project>
+    <project
+        name="egerrit"
+        label="EGerrit">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/BrandingInfo">
+        <detail
+            key="siteURI">
+          <value>https://www.eclipse.org/egerrit/</value>
+        </detail>
+      </annotation>
+      <setupTask
+          xsi:type="setup.p2:P2Task">
+        <requirement
+            name="org.eclipse.egerrit.feature.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/egerrit/updates/integration"/>
+      </setupTask>
+      <stream
+          name="plugins"/>
+      <description>https://www.eclipse.org/egerrit/</description>
+    </project>
+    <project
+        name="mylyn"
+        label="Mylyn: Gerrit / Bugzilla / Hudson in IDE">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/BrandingInfo">
+        <detail
+            key="siteURI">
+          <value>https://www.eclipse.org/mylyn/</value>
+        </detail>
+      </annotation>
+      <setupTask
+          xsi:type="setup.p2:P2Task">
+        <requirement
+            name="org.eclipse.mylyn.gerrit.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.mylyn.bugzilla_feature.feature.group"/>
+        <requirement
+            name="org.eclipse.mylyn.hudson.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/mylyn/releases/latest"/>
+      </setupTask>
+      <stream
+          name="plugins"/>
+      <description>https://www.eclipse.org/mylyn/</description>
+    </project>
+    <project
+        name="yangide"
+        label="YangIDE (opendaylight.org)">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/BrandingInfo">
+        <detail
+            key="siteURI">
+          <value>https://wiki.opendaylight.org/view/YangIDE</value>
+        </detail>
+      </annotation>
+      <setupTask
+          xsi:type="setup.p2:P2Task">
+        <requirement
+            name="org.opendaylight.yangide.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.emf.compare.feature.group"/>
+        <repository
+            url="http://209.132.179.72/job/yangide/lastSuccessfulBuild/artifact/product/update-site/target/repository/"/>
+        <repository
+            url="http://download.eclipse.org/modeling/emf/compare/updates/releases/latest"/>
+      </setupTask>
+      <stream
+          name="plugins"/>
+      <description>YANG Indexing slows down workspace.. :( https://wiki.opendaylight.org/view/YangIDE</description>
+    </project>
+  </project>
   <project name="empty"
       label="(No Projects)"
       logicalProjectContainer="/">
