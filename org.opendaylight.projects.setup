@@ -1216,7 +1216,8 @@
       defaultValue="Neon"
       storageURI="scope://Workspace"/>
   <setupTask
-      xsi:type="setup.p2:P2Task">
+      xsi:type="setup.p2:P2Task"
+      label="Mandatory Eclipse Plugins required for OpenDaylight development">
     <requirement
         name="org.eclipse.m2e.feature.feature.group"/>
     <requirement
@@ -1269,8 +1270,6 @@
     <requirement
         name="org.eclipse.graphiti.feature.feature.group"/>
     <requirement
-        name="org.dadacoalition.yedit.feature.feature.group"/>
-    <requirement
         name="org.opendaylight.yangide.feature.feature.group"/>
     <requirement
         name="org.opendaylight.yangide.m2e.yang.feature.feature.group"/>
@@ -1317,8 +1316,6 @@
     <repository
         url="http://download.eclipse.org/graphiti/updates/0.12.2"/>
     <repository
-        url="http://dadacoalition.org/yedit"/>
-    <repository
         url="http://209.132.179.72/job/yangide/lastSuccessfulBuild/artifact/product/update-site/target/repository/"/>
     <repository
         url="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt"/>
@@ -1361,6 +1358,30 @@
       <substitution>${workspace.location|path}</substitution>
     </modification>
   </setupTask>
+  <project name="xtra.plugins"
+      label="Additional optional Eclipse plugins for OpenDaylight development">
+    <project
+        name="yedit"
+        label="YEdit YAML Editor">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/BrandingInfo">
+        <detail
+            key="siteURI">
+          <value>https://github.com/oyse/yedit/wiki/Features</value>
+        </detail>
+      </annotation>
+      <setupTask
+          xsi:type="setup.p2:P2Task">
+        <requirement
+            name="org.dadacoalition.yedit.feature.feature.group"/>
+        <repository
+            url="http://dadacoalition.org/yedit"/>
+      </setupTask>
+      <stream
+          name="plugins"/>
+      <description>https://github.com/oyse/yedit/wiki/Features</description>
+    </project>
+  </project>
   <project name="empty"
       label="(No Projects)"
       logicalProjectContainer="/">
