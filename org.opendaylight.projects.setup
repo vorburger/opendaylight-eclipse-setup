@@ -1330,7 +1330,7 @@
             url="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
       </setupTask>
       <stream
-          name="plugins"/>
+          name="master"/>
       <description>https://www.eclipse.org/xtend/</description>
     </project>
     <project
@@ -1351,7 +1351,7 @@
             url="http://dadacoalition.org/yedit"/>
       </setupTask>
       <stream
-          name="plugins"/>
+          name="master"/>
       <description>https://github.com/oyse/yedit/wiki/Features</description>
     </project>
     <project
@@ -1369,7 +1369,7 @@
             url="http://resteditor.sourceforge.net/eclipse"/>
       </setupTask>
       <stream
-          name="plugins"/>
+          name="master"/>
     </project>
     <project
         name="pmd"
@@ -1391,7 +1391,7 @@
             url="https://sourceforge.net/projects/pmd/files/pmd-eclipse/update-site/"/>
       </setupTask>
       <stream
-          name="plugins"/>
+          name="master"/>
       <description>PMD's p2 regularly causing issues because SF down :( https://pmd.github.io</description>
     </project>
     <project
@@ -1412,7 +1412,7 @@
             url="https://infinitest.github.io"/>
       </setupTask>
       <stream
-          name="plugins"/>
+          name="master"/>
       <description>https://infinitest.github.io/</description>
     </project>
     <project
@@ -1433,7 +1433,7 @@
             url="http://download.sigasi.com/updates/mousefeed"/>
       </setupTask>
       <stream
-          name="plugins"/>
+          name="master"/>
       <description>https://github.com/heeckhau/mousefeed</description>
     </project>
     <project
@@ -1454,7 +1454,7 @@
             url="http://download.eclipse.org/egerrit/updates/integration"/>
       </setupTask>
       <stream
-          name="plugins"/>
+          name="master"/>
       <description>https://www.eclipse.org/egerrit/</description>
     </project>
     <project
@@ -1479,7 +1479,7 @@
             url="http://download.eclipse.org/mylyn/releases/latest"/>
       </setupTask>
       <stream
-          name="plugins"/>
+          name="master"/>
       <description>https://www.eclipse.org/mylyn/</description>
     </project>
     <project
@@ -1504,7 +1504,7 @@
             url="http://download.eclipse.org/modeling/emf/compare/updates/releases/latest"/>
       </setupTask>
       <stream
-          name="plugins"/>
+          name="master"/>
       <description>YANG Indexing slows down workspace.. :( https://wiki.opendaylight.org/view/YangIDE</description>
     </project>
   </project>
