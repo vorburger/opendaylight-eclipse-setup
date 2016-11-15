@@ -551,6 +551,10 @@
           key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.inactive_filters">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.javadoc">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -767,6 +771,10 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.importorder"
           value=";"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.javadoc"
+          value="true"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.ondemandthreshold"
