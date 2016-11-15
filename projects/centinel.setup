@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.centinel"
       remoteURI="centinel.git"
-      location="${installation.location/git/}centinel">
+      location="${git.clone.opendaylight.ROOT.location/centinel}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

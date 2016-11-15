@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.ovsdb"
       remoteURI="ovsdb.git"
-      location="${installation.location/git/}ovsdb">
+      location="${git.clone.opendaylight.ROOT.location/ovsdb}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

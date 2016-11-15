@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.faas"
       remoteURI="faas.git"
-      location="${installation.location/git/}faas">
+      location="${git.clone.opendaylight.ROOT.location/faas}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

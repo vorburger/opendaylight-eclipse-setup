@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.packetcable"
       remoteURI="packetcable.git"
-      location="${installation.location/git/}packetcable">
+      location="${git.clone.opendaylight.ROOT.location/packetcable}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.dlux"
       remoteURI="dlux.git"
-      location="${installation.location/git/}dlux">
+      location="${git.clone.opendaylight.ROOT.location/dlux}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

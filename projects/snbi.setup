@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.snbi"
       remoteURI="snbi.git"
-      location="${installation.location/git/}snbi">
+      location="${git.clone.opendaylight.ROOT.location/snbi}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

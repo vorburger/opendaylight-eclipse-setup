@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.l2switch"
       remoteURI="l2switch.git"
-      location="${installation.location/git/}l2switch">
+      location="${git.clone.opendaylight.ROOT.location/l2switch}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

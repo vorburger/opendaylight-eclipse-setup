@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.tcpmd5"
       remoteURI="tcpmd5.git"
-      location="${installation.location/git/}tcpmd5">
+      location="${git.clone.opendaylight.ROOT.location/tcpmd5}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.topoprocessing"
       remoteURI="topoprocessing.git"
-      location="${installation.location/git/}topoprocessing">
+      location="${git.clone.opendaylight.ROOT.location/topoprocessing}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

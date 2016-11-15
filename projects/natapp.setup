@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.natapp"
       remoteURI="natapp.git"
-      location="${installation.location/git/}natapp">
+      location="${git.clone.opendaylight.ROOT.location/natapp}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

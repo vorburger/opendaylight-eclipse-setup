@@ -25,7 +25,7 @@ class ProjectsSetupGenerator {
               xsi:type="git:GitCloneTask"
               id="git.clone.opendaylight.«validId(projectName)»"
               remoteURI="«projectName».git"
-              location="${installation.location/git/}«projectName»">
+              location="${git.clone.opendaylight.ROOT.location/«projectName»}">
             <annotation
                 source="http://www.eclipse.org/oomph/setup/InducedChoices">
               <detail

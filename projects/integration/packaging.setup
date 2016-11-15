@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.integration_packaging"
       remoteURI="integration/packaging.git"
-      location="${installation.location/git/}integration/packaging">
+      location="${git.clone.opendaylight.ROOT.location/integration/packaging}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

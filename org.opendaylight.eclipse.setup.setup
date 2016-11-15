@@ -18,7 +18,7 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.github.eclipse.setup"
-      location="${installation.location/git/}opendaylight-eclipse-setup"
+      location="${git.clone.opendaylight.ROOT.location/opendaylight-eclipse-setup}"
       remoteURI="https://github.com/vorburger/opendaylight-eclipse-setup.git"
       checkoutBranch="master">
     <description>git clone https://github.com/vorburger/opendaylight-eclipse-setup</description>

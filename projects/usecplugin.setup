@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.usecplugin"
       remoteURI="usecplugin.git"
-      location="${installation.location/git/}usecplugin">
+      location="${git.clone.opendaylight.ROOT.location/usecplugin}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

@@ -19,10 +19,10 @@ https://wiki.opendaylight.org/view/GettingStarted:_Eclipse, in order for anyone 
 
 This is implemented used an Eclipse "Oomph" workspace set up model, see http://www.eclipse.org/oomph
 
-By default, it will git clone the repos of all projects you clicked into your new ${installation.location/git}.
-If you already have OpenDaylight projects git clone with existing local work, then simply on the "Variables" step of the Eclipse Installer, click [X] Show all variables, and replace the "Git clone location:" variable which defaults to
-"${installation.location/git/}${@id.remoteURI|gitRepository}" by something like
-"/absolute/path/where/you/keep/your/opendaylight/clones/${@id.remoteURI|gitRepository}".
+By default, it will git clone the repos of all projects you checked into a sub-directory named "git/" next to the eclipse/ folder (${installation.location}).
+If you already have OpenDaylight projects git clone'd with existing local work, then on the "Variables" step of the Eclipse Installer, simply
+change the git.clone.opendaylight.ROOT.location variable to /absolute/path/where/you/keep/your/opendaylight/clones/.
+Use [X] Show all variables if that variable is not displayed.
 
 Similarly, if for some reason you prefer a non-standard directory layout setup with custom directories instead of Oomph's default git/, ws/ and eclipse/ directories, this can be changed during setup on the "Variables" step by clicking [X] Show all variables.
 

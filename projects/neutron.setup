@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.neutron"
       remoteURI="neutron.git"
-      location="${installation.location/git/}neutron">
+      location="${git.clone.opendaylight.ROOT.location/neutron}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.cardinal"
       remoteURI="cardinal.git"
-      location="${installation.location/git/}cardinal">
+      location="${git.clone.opendaylight.ROOT.location/cardinal}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.vtn"
       remoteURI="vtn.git"
-      location="${installation.location/git/}vtn">
+      location="${git.clone.opendaylight.ROOT.location/vtn}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

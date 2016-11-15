@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.netvirt"
       remoteURI="netvirt.git"
-      location="${installation.location/git/}netvirt">
+      location="${git.clone.opendaylight.ROOT.location/netvirt}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

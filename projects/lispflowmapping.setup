@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.lispflowmapping"
       remoteURI="lispflowmapping.git"
-      location="${installation.location/git/}lispflowmapping">
+      location="${git.clone.opendaylight.ROOT.location/lispflowmapping}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

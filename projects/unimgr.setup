@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.unimgr"
       remoteURI="unimgr.git"
-      location="${installation.location/git/}unimgr">
+      location="${git.clone.opendaylight.ROOT.location/unimgr}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

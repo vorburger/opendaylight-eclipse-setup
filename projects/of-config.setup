@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.of-config"
       remoteURI="of-config.git"
-      location="${installation.location/git/}of-config">
+      location="${git.clone.opendaylight.ROOT.location/of-config}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail

@@ -58,6 +58,13 @@
       </choice>
       <description>Choose from the available remote Gerrit URIs</description>
     </setupTask>
+    <setupTask
+        xsi:type="setup:VariableTask"
+        type="FOLDER"
+        name="git.clone.opendaylight.ROOT.location"
+        defaultValue="${installation.location/git/}">
+      <description>The root folder for all OpenDaylight Git clones</description>
+    </setupTask>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
@@ -1280,7 +1287,7 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.odlparent"
-      location="${installation.location/git/}odlparent"
+      location="${git.clone.opendaylight.ROOT.location/odlparent}"
       remoteURI="odlparent.git">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
@@ -1514,7 +1521,7 @@
     <setupTask
         xsi:type="git:GitCloneTask"
         id="git.clone.empty"
-        location="${installation.location/git/}empty"
+        location="${git.clone.opendaylight.ROOT.location/empty}"
         remoteURI="https://github.com/vorburger/empty.git">
       <description>git clone https://github.com/vorburger/empty.git</description>
     </setupTask>

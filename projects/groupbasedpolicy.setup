@@ -16,7 +16,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.groupbasedpolicy"
       remoteURI="groupbasedpolicy.git"
-      location="${installation.location/git/}groupbasedpolicy">
+      location="${git.clone.opendaylight.ROOT.location/groupbasedpolicy}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail
