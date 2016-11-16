@@ -1522,6 +1522,29 @@
           name="master"/>
       <description>YANG Indexing slows down workspace.. :( https://wiki.opendaylight.org/view/YangIDE</description>
     </project>
+    <project
+        name="sonarlint"
+        label="SonarLint">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/BrandingInfo">
+        <detail
+            key="siteURI">
+          <value>http://www.sonarlint.org/eclipse/index.html</value>
+        </detail>
+      </annotation>
+      <setupTask
+          xsi:type="setup.p2:P2Task">
+        <requirement
+            name="org.sonarlint.eclipse.feature.feature.group"/>
+        <requirement
+            name="org.sonarlint.eclipse.jdt.feature.feature.group"/>
+        <repository
+            url="http://eclipse.sonarlint.org"/>
+      </setupTask>
+      <stream
+          name="master"/>
+      <description>Sonar slows down workspace and nobody is maintaining a sane Sonar configuration on https://sonar.opendaylight.org/ anyway.. :( http://www.sonarlint.org/eclipse/index.html</description>
+    </project>
   </project>
   <project name="empty"
       label="(No Projects)"
