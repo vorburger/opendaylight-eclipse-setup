@@ -42,7 +42,7 @@ class ProjectsSetupGenerator {
           <setupTask
               xsi:type="setup.workingsets:WorkingSetTask">
             <workingSet
-                name="«projectName»">
+                name="«projectName»-code">
               <predicate
                   xsi:type="predicates:AndPredicate">
                 <operand
@@ -54,6 +54,9 @@ class ProjectsSetupGenerator {
                       xsi:type="predicates:NamePredicate"
                       pattern="(.*-aggregator$)|(.*-features$)|(.*-artifacts$)|(.*-karaf$)|(.*-parent$)"/>
                 </operand>
+                <operand
+                    xsi:type="predicates:NaturePredicate"
+                    nature="org.eclipse.jdt.core.javanature"/>
               </predicate>
             </workingSet>
             <workingSet
@@ -64,8 +67,17 @@ class ProjectsSetupGenerator {
                     xsi:type="predicates:LocationPredicate"
                     pattern="${git.clone.opendaylight.«validId(projectName)».location}.*"/>
                 <operand
-                    xsi:type="predicates:NamePredicate"
-                    pattern="(.*-aggregator$)|(.*-features$)|(.*-artifacts$)|(.*-karaf$)|(.*-parent$)"/>
+                    xsi:type="predicates:OrPredicate">
+                    <operand
+                        xsi:type="predicates:NamePredicate"
+                        pattern="(.*-aggregator$)|(.*-features$)|(.*-artifacts$)|(.*-karaf$)|(.*-parent$)"/>
+                    <operand
+                        xsi:type="predicates:NotPredicate">
+                        <operand
+                            xsi:type="predicates:NaturePredicate"
+                            nature="org.eclipse.jdt.core.javanature"/>
+                    </operand>
+                </operand>
               </predicate>
             </workingSet>
           </setupTask>

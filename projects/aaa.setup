@@ -33,7 +33,7 @@
   <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">
     <workingSet
-        name="aaa">
+        name="aaa-code">
       <predicate
           xsi:type="predicates:AndPredicate">
         <operand
@@ -45,6 +45,9 @@
               xsi:type="predicates:NamePredicate"
               pattern="(.*-aggregator$)|(.*-features$)|(.*-artifacts$)|(.*-karaf$)|(.*-parent$)"/>
         </operand>
+        <operand
+            xsi:type="predicates:NaturePredicate"
+            nature="org.eclipse.jdt.core.javanature"/>
       </predicate>
     </workingSet>
     <workingSet
@@ -55,8 +58,17 @@
             xsi:type="predicates:LocationPredicate"
             pattern="${git.clone.opendaylight.aaa.location}.*"/>
         <operand
-            xsi:type="predicates:NamePredicate"
-            pattern="(.*-aggregator$)|(.*-features$)|(.*-artifacts$)|(.*-karaf$)|(.*-parent$)"/>
+            xsi:type="predicates:OrPredicate">
+            <operand
+                xsi:type="predicates:NamePredicate"
+                pattern="(.*-aggregator$)|(.*-features$)|(.*-artifacts$)|(.*-karaf$)|(.*-parent$)"/>
+            <operand
+                xsi:type="predicates:NotPredicate">
+                <operand
+                    xsi:type="predicates:NaturePredicate"
+                    nature="org.eclipse.jdt.core.javanature"/>
+            </operand>
+        </operand>
       </predicate>
     </workingSet>
   </setupTask>
