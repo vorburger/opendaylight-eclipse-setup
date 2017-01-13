@@ -12,7 +12,8 @@ controller
 coretutorials
 didm
 dlux
-docs
+# see https://lists.opendaylight.org/pipermail/documentation/2017-January/001062.html why no docs:
+# docs
 faas
 genius
 groupbasedpolicy
