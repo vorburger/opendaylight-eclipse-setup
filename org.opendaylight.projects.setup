@@ -1567,7 +1567,7 @@
   <project href="projects/coretutorials.setup#/"/>
   <project href="projects/didm.setup#/"/>
   <project href="projects/dlux.setup#/"/>
-  <project href="projects/docs.setup#/"/>
+  <project href="projects_no-re-gen/docs.setup#/"/>
   <project href="org.opendaylight.eclipse.setup.setup#/"/>
   <project href="projects/faas.setup#/"/>
   <project href="projects/genius.setup#/"/>
