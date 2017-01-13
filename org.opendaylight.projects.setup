@@ -1258,8 +1258,6 @@
     <requirement
         name="org.sonatype.m2e.buildhelper.feature.feature.group"/>
     <requirement
-        name="org.sonatype.tycho.m2e.feature.feature.group"/>
-    <requirement
         name="org.eclipse.graphiti.feature.feature.group"/>
     <requirement
         name="org.jboss.tools.maven.apt.feature.feature.group"/>
@@ -1279,8 +1277,6 @@
         url="http://ifedorenko.github.com/m2e-extras/"/>
     <repository
         url="https://otto.takari.io/content/sites/m2e.extras/m2eclipse-buildhelper/0.15.0/N/0.15.0.201405280027/"/>
-    <repository
-        url="http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.9.0/N/LATEST/"/>
     <repository
         url="http://download.eclipse.org/technology/m2e/releases"/>
     <repository
