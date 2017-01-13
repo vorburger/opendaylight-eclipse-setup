@@ -94,8 +94,11 @@ Why do I not see the "Projects" lists, only the "Product" selection?::
 Why do I not see OpenDaylight.org in the Projects lists, only the Eclipse & GitHub Projects?::
   Use the "Select Catalogs" icon in the upper right hand corner, OpenDaylight may be filtered.
 
-Why do I still see red compilation errors for YANG generated code that could not be found, even though I did `mvn -Pq generate-sources` on the CLI?::
-  Since the introduction of the `target-ide/` folder to completely separate the CLI and the Eclipse IDE build (required because the two would step onto each others feet, look JARs, etc. so better to keep them separate), when you do e.g. a `mvn -Pq generate-sources` (the `-Pq` is for the "quick" profile and skips a bunch of things to make your local build faster) it will generate code in `target/generated-sources`, but Eclipse will look in `target-ide/generated-sources`. Use `mvn -Pq,ide generate-sources` to activate the Maven "ide" profile to generate code into `target-ide/` instead of `target/`.
+Why do I still see red compilation errors for YANG generated code that could not be found, even though I did `mvn -Pq clean generate-sources` on the CLI?::
+  Since the introduction of the `target-ide/` folder to completely separate the CLI and the Eclipse IDE build (required because the two would step onto each others feet, look JARs, etc. so better to keep them separate), when you do e.g. a `mvn -Pq clean generate-sources` (the `-Pq` is for the "quick" profile and skips a bunch of things to make your local build faster) it will generate code in `target/generated-sources`, but Eclipse will look in `target-ide/generated-sources`. Use `mvn -Pq,ide clean generate-sources` to activate the Maven "ide" profile to generate code into `target-ide/` instead of `target/`.
+
+Why do I still see red compilation errors for YANG generated code, even though I did `mvn -Pq,ide clean generate-sources` ?::
+  Note that you obviously have to do this on the project you want to work on, as well as on any other projects open in the workspace with YANG gen. code which your project you're working with depends on.
 
 What to do when getting installation ERRORS such as "org.eclipse.equinox.p2.transport.ecf code=1002 Unable to read repository at http://..." with "org.apache.http.conn.ConnectTimeoutException: Connect to ... timed out", or the Installer gets "stuck" in the "P2 Director, Adding repository", etc.::
   These are "just" network connection issues which can happen when it's downloading the additional Eclipse plugins that are required. Normally just retrying (by Cancel Operation, Back, Finish again), or waiting and retrying later, fixes all of these. If you have managed to previously have it already successfully install the required Eclipse plugins at least once, then you can often still proceed in the face of such errors simply by clicking the Offline icon on the toolbar, or by un-checking the P2 Director task in the "tasks to be executed and optionally uncheck unwanted tasks" pop-up confirmation dialog.  Also if it ever asks you something like "Can't reach ... use locally cached version?", say Yes.
@@ -105,7 +108,7 @@ What to do when getting ERROR: org.eclipse.equinox.p2.director code=10053 Cannot
 
 What do I have to do if I'm on a corporate/universite campus network behind an HTTP Proxy which limits full internet access?::
   Note that even if you can access remote Eclipse plugin p2 update sites, such as http://eclipse-cs.sf.net, from your Web Browser, the Eclipse Installer and the Eclipse IDE may still not be able to, if it's not aware of your HTTP Proxy.  The easiest is to go use a network without HTTP proxy (e.g. try from home).  Otherwise you can also in the Eclipse Installer, use the "Network Proxy Settings", available as the 2nd icon after the Help icon in the lower left hand corner of all screens of the main wizard steps UI.  In the full Eclipse IDE, once it installed, use menu Window > Preferences > General > Network Connections.
-  
+
 Why doesn't the SonarCube (SonarLint) plugin show the same problems in Eclipse as on the https://sonar.opendaylight.org web UI?::
   It does - IFF you right-click project(s) to "Bind to a SonarCube project" AND then touch a Java file or rebuild the project!
 
@@ -115,7 +118,7 @@ Wouldn't it be better to disable automatic rebuilding?::
 Automatic workspace building is slow.::
   There is probably room for improvement, likely more so in Builders of 3rd party plugins than core Eclipse, e.g. yangide, checkstyle etc.  Contributions which performance profile these and help with improvements those projects improve their performance are certainly highly welcome.
 
-Do I still have to do at least `mvn -Pq,ide generate-sources` or even a full `mvn -Pq,ide install` to make red ink go away after I switch branches?::
+Do I still have to do at least `mvn -Pq,ide clean generate-sources` or even a full `mvn -Pq,ide clean install` to make red ink go away after I switch branches?::
   Yes, you do.  See the question above.  (We originally hoped to be able to auto. regen. the Java code in line with changes to YANG e.g. from branch switching, but this does not yet work.)
 
 
