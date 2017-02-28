@@ -1494,31 +1494,6 @@
       <description>https://www.eclipse.org/mylyn/</description>
     </project>
     <project
-        name="yangide"
-        label="YangIDE (opendaylight.org)">
-      <annotation
-          source="http://www.eclipse.org/oomph/setup/BrandingInfo">
-        <detail
-            key="siteURI">
-          <value>https://wiki.opendaylight.org/view/YangIDE</value>
-        </detail>
-      </annotation>
-      <setupTask
-          xsi:type="setup.p2:P2Task">
-        <requirement
-            name="org.opendaylight.yangide.feature.feature.group"/>
-        <requirement
-            name="org.eclipse.emf.compare.feature.group"/>
-        <repository
-            url="http://209.132.179.72/job/yangide/lastSuccessfulBuild/artifact/product/update-site/target/repository/"/>
-        <repository
-            url="http://download.eclipse.org/modeling/emf/compare/updates/releases/latest"/>
-      </setupTask>
-      <stream
-          name="master"/>
-      <description>YANG Indexing slows down workspace.. :( https://wiki.opendaylight.org/view/YangIDE</description>
-    </project>
-    <project
         name="sonarlint"
         label="SonarLint">
       <annotation
