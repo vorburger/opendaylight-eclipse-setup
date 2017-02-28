@@ -559,6 +559,10 @@
           key="/instance/org.eclipse.jdt.core/disableNewJavaIndex">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.m2e.core/eclipse.m2.offline">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -1039,6 +1043,10 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.m2e.core/eclipse.m2.globalSettingsFile"
           value="${git.clone.opendaylight.odlparent.location}/settings.xml"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.m2e.core/eclipse.m2.offline"
+          value="true"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.m2e.core/eclipse.m2.problem.duplicateParentGroupId"
