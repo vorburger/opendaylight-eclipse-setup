@@ -94,6 +94,9 @@ Why do I not see the "Projects" lists, only the "Product" selection?::
 Why do I not see OpenDaylight.org in the Projects lists, only the Eclipse & GitHub Projects?::
   Use the "Select Catalogs" icon in the upper right hand corner, OpenDaylight may be filtered.
 
+Why do I get "... Cannot access opendaylight-snapshot (https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/) in offline mode ..." ?::
+  Since the menu Window > Preferences > Maven > Offline was enabled by default (which was done to save you constant daily re-downloads of hundreds of the very latest bleeding edge ODL SNAPSHOTS JARs), you'll have to right-click projects to do Maven > Update Projects (Alt-F5) for an explicit one-time uncheck Offline and Update Dependencies.  (Alternatively, you could also do a CLI mvn build to get the JARs, but you don't have to and can let Eclipse M2E do it, via  Update Projects.)
+
 Why do I still see red compilation errors for YANG generated code that could not be found, even though I did `mvn -Pq clean generate-sources` on the CLI?::
   Since the introduction of the `target-ide/` folder to completely separate the CLI and the Eclipse IDE build (required because the two would step onto each others feet, look JARs, etc. so better to keep them separate), when you do e.g. a `mvn -Pq clean generate-sources` (the `-Pq` is for the "quick" profile and skips a bunch of things to make your local build faster) it will generate code in `target/generated-sources`, but Eclipse will look in `target-ide/generated-sources`. Use `mvn -Pq,ide clean generate-sources` to activate the Maven "ide" profile to generate code into `target-ide/` instead of `target/`.
 
