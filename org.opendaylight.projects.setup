@@ -563,6 +563,10 @@
           key="/instance/org.eclipse.m2e.core/eclipse.m2.offline">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_code_templates">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -795,6 +799,10 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.staticondemandthreshold"
           value="999"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_code_templates"
+          value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;templates>&lt;template autoinsert=&quot;false&quot; context=&quot;catchblock_context&quot; deleted=&quot;false&quot; description=&quot;Code in new catch blocks&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.text.codetemplates.catchblock&quot; name=&quot;catchblock&quot;>LOG.error(&quot;(..something..) failed&quot;, $${exception_var}); // TODO&lt;/template>&lt;/templates>"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_templates"
