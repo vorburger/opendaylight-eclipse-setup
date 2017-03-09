@@ -567,6 +567,38 @@
           key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_code_templates">
         <value>record</value>
       </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.launching/org.eclipse.jdt.launching.PREF_CONNECT_TIMEOUT">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.launching/org.eclipse.jdt.launching.only_include_exported_classpath_entries">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.debug/org.eclipse.jdt.debug.PREF_HCR_WITH_COMPILATION_ERRORS">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.debug/org.eclipse.jdt.debug.suspend_for_breakpoints_during_evaluation">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.debug/org.eclipse.jdt.debug.do_not_install_breakpoints_from_unrelated_sources">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.debug/org.eclipse.jdt.debugdefault_watchpoint_suspend_policy">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.debug/org.eclipse.jdt.debug.default_breakpoint_suspend_policy">
+        <value>record</value>
+      </detail>
+      <detail
+          key="/instance/org.eclipse.jdt.debug/org.eclipse.jdt.debug.PREF_REQUEST_TIMEOUT">
+        <value>record</value>
+      </detail>
     </annotation>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -738,6 +770,34 @@
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
+        name="org.eclipse.jdt.debug">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.debug/org.eclipse.jdt.debug.default_breakpoint_suspend_policy"
+          value="1"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.debug/org.eclipse.jdt.debug.do_not_install_breakpoints_from_unrelated_sources"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.debug/org.eclipse.jdt.debug.PREF_HCR_WITH_COMPILATION_ERRORS"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.debug/org.eclipse.jdt.debug.PREF_REQUEST_TIMEOUT"
+          value="3000"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.debug/org.eclipse.jdt.debug.suspend_for_breakpoints_during_evaluation"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.debug/org.eclipse.jdt.debugdefault_watchpoint_suspend_policy"
+          value="0"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
         name="org.eclipse.jdt.debug.ui">
       <setupTask
           xsi:type="setup:PreferenceTask"
@@ -755,6 +815,18 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.inactive_filters"
           value=""/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.jdt.launching">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.launching/org.eclipse.jdt.launching.only_include_exported_classpath_entries"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.launching/org.eclipse.jdt.launching.PREF_CONNECT_TIMEOUT"
+          value="20000"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
