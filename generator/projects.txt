@@ -10,6 +10,7 @@ cardinal
 centinel
 controller
 coretutorials
+daexim
 didm
 dlux
 # see https://lists.opendaylight.org/pipermail/documentation/2017-January/001062.html why no docs:

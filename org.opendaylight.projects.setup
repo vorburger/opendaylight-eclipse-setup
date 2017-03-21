@@ -1681,6 +1681,7 @@
   <project href="projects/centinel.setup#/"/>
   <project href="projects/controller.setup#/"/>
   <project href="projects/coretutorials.setup#/"/>
+  <project href="projects/daexim.setup#/"/>
   <project href="projects/didm.setup#/"/>
   <project href="projects/dlux.setup#/"/>
   <project href="org.opendaylight.eclipse.setup.setup#/"/>
