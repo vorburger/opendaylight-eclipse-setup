@@ -1334,8 +1334,6 @@
     <requirement
         name="org.eclipse.m2e.sdk.feature.feature.group"/>
     <requirement
-        name="com.mountainminds.eclemma.feature.feature.group"/>
-    <requirement
         name="com.github.sevntu.checkstyle.checks.feature.feature.group"/>
     <requirement
         name="net.sf.eclipsecs.feature.group"/>
@@ -1361,8 +1359,6 @@
         name="AnyEditTools.feature.group"/>
     <requirement
         name="org.jboss.tools.m2e.jdt.feature.feature.group"/>
-    <repository
-        url="http://update.eclemma.org"/>
     <repository
         url="http://eclipse-cs.sf.net/update"/>
     <repository
