@@ -1744,7 +1744,7 @@
   <project href="projects/ocpplugin.setup#/"/>
   <project href="projects/odlparent.setup#/"/>
   <project href="projects/of-config.setup#/"/>
-  <project href="projects/ofextensions.setup#/"/>
+  <project href="projects/ofextensions/circuitsw.setup#/"/>
   <project href="projects/openflowjava.setup#/"/>
   <project href="projects/openflowplugin.setup#/"/>
   <project href="projects/ovsdb.setup#/"/>

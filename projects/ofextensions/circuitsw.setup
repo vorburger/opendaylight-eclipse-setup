@@ -11,12 +11,12 @@
     xmlns:setup.workingsets="http://www.eclipse.org/oomph/setup/workingsets/1.0"
     xmlns:workingsets="http://www.eclipse.org/oomph/workingsets/1.0"
     xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/maven/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Maven.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupWorkingSets.ecore"
-    name="ofextensions">
+    name="ofextensions/circuitsw">
   <setupTask
       xsi:type="git:GitCloneTask"
-      id="git.clone.opendaylight.ofextensions"
-      remoteURI="ofextensions.git"
-      location="${git.clone.opendaylight.ROOT.location/ofextensions}">
+      id="git.clone.opendaylight.ofextensions_circuitsw"
+      remoteURI="ofextensions/circuitsw.git"
+      location="${git.clone.opendaylight.ROOT.location/ofextensions/circuitsw}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail
@@ -28,17 +28,17 @@
         <value>remoteURI</value>
       </detail>
     </annotation>
-    <description>git clone ofextensions</description>
+    <description>git clone ofextensions/circuitsw</description>
   </setupTask>
   <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">
     <workingSet
-        name="ofextensions-code">
+        name="ofextensions/circuitsw-code">
       <predicate
           xsi:type="predicates:AndPredicate">
         <operand
             xsi:type="predicates:LocationPredicate"
-            pattern="${git.clone.opendaylight.ofextensions.location}.*"/>
+            pattern="${git.clone.opendaylight.ofextensions_circuitsw.location}.*"/>
         <operand
             xsi:type="predicates:NotPredicate">
           <operand
@@ -51,12 +51,12 @@
       </predicate>
     </workingSet>
     <workingSet
-        name="ofextensions-build">
+        name="ofextensions/circuitsw-build">
       <predicate
           xsi:type="predicates:AndPredicate">
         <operand
             xsi:type="predicates:LocationPredicate"
-            pattern="${git.clone.opendaylight.ofextensions.location}.*"/>
+            pattern="${git.clone.opendaylight.ofextensions_circuitsw.location}.*"/>
         <operand
             xsi:type="predicates:OrPredicate">
             <operand
@@ -77,11 +77,11 @@
       id="import.maven"
       projectNameTemplate="[groupId].[artifactId]">
     <sourceLocator
-        rootFolder="${git.clone.opendaylight.ofextensions.location}"
+        rootFolder="${git.clone.opendaylight.ofextensions_circuitsw.location}"
         locateNestedProjects="true"/>
   </setupTask>
   <stream name="master"/>
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
-      href="../org.opendaylight.projects.setup#/"/>
+      href="../../org.opendaylight.projects.setup#/"/>
 </setup:Project>

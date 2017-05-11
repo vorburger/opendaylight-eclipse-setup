@@ -38,7 +38,7 @@ nic
 ocpplugin
 odlparent
 of-config
-ofextensions
+ofextensions/circuitsw
 openflowjava
 openflowplugin
 ovsdb
