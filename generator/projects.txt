@@ -52,6 +52,7 @@ src
 sxp
 tcpmd5
 topoprocessing
+transportpce
 tsdr
 ttp
 unimgr

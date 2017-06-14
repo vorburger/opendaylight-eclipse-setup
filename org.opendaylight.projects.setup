@@ -1758,6 +1758,7 @@
   <project href="projects/sxp.setup#/"/>
   <project href="projects/tcpmd5.setup#/"/>
   <project href="projects/topoprocessing.setup#/"/>
+  <project href="projects/transportpce.setup#/"/>
   <project href="projects/tsdr.setup#/"/>
   <project href="projects/ttp.setup#/"/>
   <project href="projects/unimgr.setup#/"/>
