@@ -1412,7 +1412,7 @@
     <repository
         url="http://download.eclipse.org/technology/m2e/releases"/>
     <repository
-        url="http://download.eclipse.org/graphiti/updates/0.12.2"/>
+        url="http://archive.eclipse.org/graphiti/updates/0.12.2"/>
     <repository
         url="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt"/>
     <repository
