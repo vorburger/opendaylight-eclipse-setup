@@ -1397,8 +1397,6 @@
         name="org.jboss.tools.maven.apt.feature.feature.group"/>
     <requirement
         name="AnyEditTools.feature.group"/>
-    <requirement
-        name="org.jboss.tools.m2e.jdt.feature.feature.group"/>
     <repository
         url="http://eclipse-cs.sf.net/update"/>
     <repository
@@ -1417,8 +1415,6 @@
         url="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt"/>
     <repository
         url="http://andrei.gmxhome.de/eclipse/"/>
-    <repository
-        url="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-jdt-compiler/"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
