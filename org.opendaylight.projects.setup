@@ -1397,6 +1397,8 @@
         name="org.jboss.tools.maven.apt.feature.feature.group"/>
     <requirement
         name="AnyEditTools.feature.group"/>
+    <requirement
+        name="eclipse_external_annotations_m2e_plugin.feature.feature.group"/>
     <repository
         url="http://eclipse-cs.sf.net/update"/>
     <repository
@@ -1415,6 +1417,8 @@
         url="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt"/>
     <repository
         url="http://andrei.gmxhome.de/eclipse/"/>
+    <repository
+        url="http://www.lastnpe.org/eclipse-external-annotations-m2e-plugin-p2-site/"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
