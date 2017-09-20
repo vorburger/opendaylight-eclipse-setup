@@ -15,7 +15,7 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.opendaylight.yangide"
       remoteURI="yangide.git"
-      location="${git.clone.opendaylight.ROOT.location/yangide}"
+      location="${git.clone.opendaylight.ROOT.location/yangide}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail
