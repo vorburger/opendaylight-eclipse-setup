@@ -914,7 +914,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_code_templates"
-          value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;templates>&lt;template autoinsert=&quot;false&quot; context=&quot;catchblock_context&quot; deleted=&quot;false&quot; description=&quot;Code in new catch blocks&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.text.codetemplates.catchblock&quot; name=&quot;catchblock&quot;>LOG.error(&quot;(..something..) failed&quot;, $${exception_var}); // TODO&lt;/template>&lt;/templates>"/>
+          value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;templates>&lt;template autoinsert=&quot;false&quot; context=&quot;catchblock_context&quot; deleted=&quot;false&quot; description=&quot;Code in new catch blocks&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.text.codetemplates.catchblock&quot; name=&quot;catchblock&quot;>LOG.error(&quot;(..something..) failed&quot;, $${exception_var}); // TODO&lt;/template>&#xA;&lt;template autoinsert=&quot;false&quot; context=&quot;constructorbody_context&quot; deleted=&quot;false&quot; description=&quot;Code in created constructor stubs&quot; enabled=&quot;true&quot; id=&quot;org.eclipse.jdt.ui.text.codetemplates.constructorbody&quot; name=&quot;constructorbody&quot;/>&lt;/templates>"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_templates"
