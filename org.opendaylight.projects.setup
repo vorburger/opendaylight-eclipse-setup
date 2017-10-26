@@ -1312,13 +1312,6 @@
   </setupTask>
   <setupTask
       xsi:type="setup:EclipseIniTask"
-      option="-XX:MaxPermSize"
-      value="512m"
-      vm="true">
-    <description>Set the max. perm gen. memory space needed by the Eclipse IDE JVM needed to work with the projects of ${scope.project.label}</description>
-  </setupTask>
-  <setupTask
-      xsi:type="setup:EclipseIniTask"
       option="-Declipse.m2.stats.allow="
       value="true"
       vm="true">
