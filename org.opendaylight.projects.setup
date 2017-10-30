@@ -1377,6 +1377,8 @@
     <requirement
         name="edu.umd.cs.findbugs.plugin.eclipse.feature.group"/>
     <requirement
+        name="com.github.spotbugs.plugin.eclipse.feature.group"/>
+    <requirement
         name="com.ifedorenko.m2e.mavendev.feature.feature.group"/>
     <requirement
         name="com.ifedorenko.m2e.sourcelookup.feature.feature.group"/>
@@ -1398,6 +1400,8 @@
         url="http://m2e-code-quality.github.io/m2e-code-quality/site"/>
     <repository
         url="http://findbugs.cs.umd.edu/eclipse-daily/"/>
+    <repository
+        url="https://spotbugs.github.io/eclipse/"/>
     <repository
         url="http://ifedorenko.github.com/m2e-extras/"/>
     <repository
