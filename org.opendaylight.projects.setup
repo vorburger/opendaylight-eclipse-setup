@@ -1393,7 +1393,7 @@
     <requirement
         name="AnyEditTools.feature.group"/>
     <requirement
-        name="eclipse_external_annotations_m2e_plugin.feature.feature.group"/>
+        name="org.lastnpe.m2e.feature.feature.group"/>
     <repository
         url="http://eclipse-cs.sf.net/update"/>
     <repository
