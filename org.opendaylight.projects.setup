@@ -1407,7 +1407,7 @@
     <repository
         url="https://otto.takari.io/content/sites/m2e.extras/m2eclipse-buildhelper/0.15.0/N/0.15.0.201405280027/"/>
     <repository
-        url="http://download.eclipse.org/technology/m2e/releases"/>
+        url="http://download.eclipse.org/technology/m2e/milestones/1.9/"/>
     <repository
         url="http://archive.eclipse.org/graphiti/updates/0.12.2"/>
     <repository
