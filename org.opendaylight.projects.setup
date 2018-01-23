@@ -1411,7 +1411,7 @@
     <repository
         url="http://archive.eclipse.org/graphiti/updates/0.12.2"/>
     <repository
-        url="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt"/>
+        url="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.4.0-2018-01-12_16-25-02-H6/"/>
     <repository
         url="http://andrei.gmxhome.de/eclipse/"/>
     <repository
