@@ -1591,7 +1591,7 @@
         <requirement
             name="org.eclipse.egerrit.feature.feature.group"/>
         <repository
-            url="http://download.eclipse.org/egerrit/updates/integration"/>
+            url="http://download.eclipse.org/egerrit/updates/milestone"/>
       </setupTask>
       <stream
           name="master"/>
