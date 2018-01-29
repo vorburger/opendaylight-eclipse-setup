@@ -97,6 +97,9 @@ Why do I not see OpenDaylight.org in the Projects lists, only the Eclipse & GitH
 Why do I get "... Cannot access opendaylight-snapshot (https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/) in offline mode ..." ?::
   Since the menu Window > Preferences > Maven > Offline was enabled by default (which was done to save you constant daily re-downloads of hundreds of the very latest bleeding edge ODL SNAPSHOTS JARs), you'll have to right-click projects to do Maven > Update Projects (Alt-F5) for an explicit one-time uncheck Offline and Update Dependencies.  (Alternatively, you could also do a CLI mvn build to get the JARs, but you don't have to and can let Eclipse M2E do it, via  Update Projects.)
 
+Why do I get "... Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.opendaylight.odlparent:odlparent-lite:pom:3.0.2 has not been downloaded from it before. and 'parent.relativePath' points at no local POM." ?::
+  The very first time Eclipse opens, you'll have to File > Restart it once.  This is because the automated Preference which Oomph applies so that it uses http://nexus.opendaylight.org instead of Maven central has only just been configured, and M2E didn't automatically pick it up.  You then need to make it go online once, see previous question.
+
 Why do I still see red compilation errors for YANG generated code that could not be found, even though I did `mvn -Pq clean generate-sources` on the CLI?::
   Since the introduction of the `target-ide/` folder to completely separate the CLI and the Eclipse IDE build (required because the two would step onto each others feet, look JARs, etc. so better to keep them separate), when you do e.g. a `mvn -Pq clean generate-sources` (the `-Pq` is for the "quick" profile and skips a bunch of things to make your local build faster) it will generate code in `target/generated-sources`, but Eclipse will look in `target-ide/generated-sources`. Use `mvn -Pq,ide clean generate-sources` to activate the Maven "ide" profile to generate code into `target-ide/` instead of `target/`.
 
@@ -142,23 +145,11 @@ Automatic workspace building is slow.::
 Do I still have to do at least `mvn -Pq,ide clean generate-sources` or even a full `mvn -Pq,ide clean install` to make red ink go away after I switch branches?::
   Yes, you do.  See the question above.  (We originally hoped to be able to auto. regen. the Java code in line with changes to YANG e.g. from branch switching, but this does not yet work.)
 
+Why could there be Checkstyle discrepancies between the CLI mvn build VS in Eclipse?::
+  The version of Checkstyle JAR used in Maven and Eclipse plug-in will have to be kept matching (unless https://sourceforge.net/p/eclipse-cs/feature-requests/158/ is ever implemented).  Also the Checkstyle Eclipse plug-in cannot deal with custom Checkstyle checks (unless they are packaged into an Eclipse plug-in), see https://sourceforge.net/p/eclipse-cs/feature-requests/159/.  In practice this should not be an issue for ODL, because e.g. the OpenDaylight custom org.opendaylight.yangtools.checkstyle-logging checks are, intentionally not widely used; we use FindBugs via https://git.opendaylight.org/gerrit/#/c/66449/ for the same.
 
-
-==== Known open issues causing red in opendaylight Eclipse workspace
-
-Until the Gerrits listed below get merged, you can locally work around these problems by pulling the listed Gerrit changes into your workspace.  You do not need to mvn install, because M2E "workspace resolution" will make the changes immediately effective.
-
-===== Cross projects, affecting all
-
-* The very first time Eclipse opens, you'll have to File > Restart it once.  This is because the automated Preference which Oomph applies so that it uses nexus.opendaylight.org instead of Maven central has only just been configured, and M2E didn't automatically pick it up.
-
-* The "javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target" error while fetching url https://nexus.opendaylight.org/content/sites/p2repos/org.opendaylight.yangide/snapshot/content.xml: You have been hit by https://bugs.opendaylight.org/show_bug.cgi?id=5806.  It appears that OpenJDK does not have this problem; it's specific to older versions of Oracle JDK Java 8 < 8u101.  Please upgrade to either OpenJDK (recommended if you are on Linux) or latest Oracle JDK 8u131 or more recent (easier if you are on Windows).  You could also try to import the respective CA cert into your store as described e.g. https://bugs.eclipse.org/bugs/show_bug.cgi?id=492014#c1 and in other places online, if you are up for it.  The only other thing I can do is encourage you to whine about that issue on e.g. the integration-dev@lists.opendaylight.org and/or dev@lists.opendaylight.org mailing lists, and comment and vote for it on that bugzilla issue.
-
-* Checkstyle
-** OpenDaylight custom Checkstyle checks from org.opendaylight.yangtools.checkstyle-logging (used e.g. in AAA) cause issues; need to either write a new Eclipse plugin just for that (urgh), or contribute https://sourceforge.net/p/eclipse-cs/feature-requests/159/.
-** version of Checkstyle JAR used in Maven and Eclipse plug-in will have to be kept matching (unless https://sourceforge.net/p/eclipse-cs/feature-requests/158/ is ever implemented)
-
-
+What's the "javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target" ?::
+  You may have been hit by a reincarnation of https://bugs.opendaylight.org/show_bug.cgi?id=5806.  It appears that OpenJDK does not have this problem; it's specific to older versions of Oracle JDK Java 8 < 8u101.  Please upgrade to either OpenJDK (recommended if you are on Linux) or latest Oracle JDK 8u131 or more recent (easier if you are on Windows).  You could also try to import the respective CA cert into your store as described e.g. https://bugs.eclipse.org/bugs/show_bug.cgi?id=492014#c1 and in other places online, if you are up for it.  The only other thing I can do is encourage you to whine about that issue on e.g. the integration-dev@lists.opendaylight.org and/or dev@lists.opendaylight.org mailing lists, and comment and vote for it on that bugzilla issue.
 
 
 ==== Implementation Details for Contributors
