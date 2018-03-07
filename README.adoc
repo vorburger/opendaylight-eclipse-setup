@@ -106,6 +106,9 @@ Why do I still see red compilation errors for YANG generated code that could not
 Why do I still see red compilation errors for YANG generated code, even though I did `mvn -Pq,ide clean generate-sources` ?::
   Note that you obviously have to do this on the project you want to work on, as well as on any other projects open in the workspace with YANG gen. code which your project you're working with depends on.
 
+What do to when "Running Checkstyle audit on..." hits "File not found: /home/YOU/.m2/repository/org/opendaylight/odlparent/checkstyle/3.0.2/checkstyle-3.0.2.jar (No such file or directory)" ?::
+  The Checkstyle Eclipse plugin does not download the ODL Checkstyle configuration from nexus.opendaylight.org, but only looks in ~/.m2.  After your very first run of something like a `mvn -Pq clean install` on the CLI, then that will be there.
+
 What to do when hitting "An internal error occured during: Updating Maven Project" ?::
   These problems typically mean that one of the many Maven plugins used in ODL failed to run in M2E, or they are bugs in M2E (see below for one specific example).  First, it's best is to close all projects in the workspace you don't really need to actively work on. Then first retry a Maven > Update Project, and/or Project > Clean to see if it's reproducible.  If it's one time or only sporadic, then simply ignore such errors, as they are not blocking you (M2E is not perfect).  If they are blocking you, it may be possible for us to de-activate the respective Maven plugin from running in ODL through a "lifecycle mapping". Please open the Error Log view in Eclipse, and copy/paste the details of the respective error (or even just attach an export of your entire Eclipse log) in an email to the mailing list mentioned in the first QA, also specifying which specific ODL projects you saw this in.
 
