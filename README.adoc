@@ -100,6 +100,9 @@ Why do I get "... Cannot access opendaylight-snapshot (https://nexus.opendayligh
 Why do I get "... Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.opendaylight.odlparent:odlparent-lite:pom:3.0.2 has not been downloaded from it before. and 'parent.relativePath' points at no local POM." ?::
   The very first time Eclipse opens, you'll have to File > Restart it once.  This is because the automated Preference which Oomph applies so that it uses http://nexus.opendaylight.org instead of Maven central has only just been configured, and M2E didn't automatically pick it up.  You then need to make it go online once, see previous question.
 
+Why do I still see the problems with dependencies from the two questions above, after I have done what those answer suggest? ::
+  Switch to (first) do a CLI mvn build to get the JARs, and when you have that working then look at getting the code into Eclipse.  Follow https://docs.opendaylight.org/en/latest/developer-guide/developing-apps-on-the-opendaylight-controller.html to set up the settings.xml. Then use "mvn -Pq,ide clean install".
+
 Why do I still see red compilation errors for YANG generated code that could not be found, even though I did `mvn -Pq clean generate-sources` on the CLI?::
   Since the introduction of the `target-ide/` folder to completely separate the CLI and the Eclipse IDE build (required because the two would step onto each others feet, look JARs, etc. so better to keep them separate), when you do e.g. a `mvn -Pq clean generate-sources` (the `-Pq` is for the "quick" profile and skips a bunch of things to make your local build faster) it will generate code in `target/generated-sources`, but Eclipse will look in `target-ide/generated-sources`. Use `mvn -Pq,ide clean generate-sources` to activate the Maven "ide" profile to generate code into `target-ide/` instead of `target/`.
 
