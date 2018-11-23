@@ -1375,6 +1375,8 @@
     <requirement
         name="com.github.spotbugs.plugin.eclipse.feature.group"/>
     <requirement
+        name="com.basistech.m2e.code.quality.spotbugs.feature.feature.group"/>
+    <requirement
         name="com.ifedorenko.m2e.mavendev.feature.feature.group"/>
     <requirement
         name="com.ifedorenko.m2e.sourcelookup.feature.feature.group"/>
