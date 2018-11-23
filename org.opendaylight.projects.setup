@@ -1719,6 +1719,7 @@
   <project href="projects/ovsdb.setup#/"/>
   <project href="projects/packetcable.setup#/"/>
   <project href="projects/sdninterfaceapp.setup#/"/>
+  <project href="projects/serviceutils.setup#/"/>
   <project href="projects/sfc.setup#/"/>
   <project href="projects/snbi.setup#/"/>
   <project href="projects/snmp.setup#/"/>
