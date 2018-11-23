@@ -1449,29 +1449,6 @@
   <project name="xtra.plugins"
       label="Additional optional Eclipse plugins for OpenDaylight development">
     <project
-        name="findbugs"
-        label="FindBugs - to be replaced with SpotBugs">
-      <annotation
-          source="http://findbugs.sourceforge.net">
-        <detail
-            key="siteURI">
-          <value>https://github.com/oyse/yedit/wiki/Features</value>
-        </detail>
-      </annotation>
-      <setupTask
-          xsi:type="setup.p2:P2Task">
-        <requirement
-            name="com.basistech.m2e.code.quality.findbugs.feature.feature.group"/>
-        <requirement
-            name="edu.umd.cs.findbugs.plugin.eclipse.feature.group"/>
-        <repository
-            url="http://findbugs.cs.umd.edu/eclipse-daily/"/>
-      </setupTask>
-      <stream
-          name="master"/>
-      <description>http://findbugs.sourceforge.net - to be replaced with https://spotbugs.github.io</description>
-    </project>
-    <project
         name="xtend"
         label="Xtend Language">
       <annotation
