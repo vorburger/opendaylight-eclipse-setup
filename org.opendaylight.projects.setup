@@ -1393,7 +1393,7 @@
     <repository
         url="http://eclipse-cs.sf.net/update"/>
     <repository
-        url="http://m2e-code-quality.github.io/m2e-code-quality/site"/>
+        url="https://m2e-code-quality.github.io/m2e-code-quality-p2-site/snapshot/"/>
     <repository
         url="https://spotbugs.github.io/eclipse/"/>
     <repository
