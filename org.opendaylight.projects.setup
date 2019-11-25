@@ -1377,10 +1377,6 @@
     <requirement
         name="com.basistech.m2e.code.quality.spotbugs.feature.feature.group"/>
     <requirement
-        name="com.ifedorenko.m2e.mavendev.feature.feature.group"/>
-    <requirement
-        name="com.ifedorenko.m2e.sourcelookup.feature.feature.group"/>
-    <requirement
         name="io.takari.stats.m2e.feature.feature.group"/>
     <requirement
         name="org.sonatype.m2e.buildhelper.feature.feature.group"/>
@@ -1398,8 +1394,6 @@
         url="https://m2e-code-quality.github.io/m2e-code-quality-p2-site/snapshot/"/>
     <repository
         url="https://spotbugs.github.io/eclipse/"/>
-    <repository
-        url="http://ifedorenko.github.com/m2e-extras/"/>
     <repository
         url="https://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-buildhelper/0.15.0/N/0.15.0.201405280027/"/>
     <repository
