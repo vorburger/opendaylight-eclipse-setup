@@ -1389,7 +1389,7 @@
     <requirement
         name="org.lastnpe.m2e.feature.feature.group"/>
     <repository
-        url="http://eclipse-cs.sf.net/update"/>
+        url="https://checkstyle.org/eclipse-cs-update-site/"/>
     <repository
         url="https://m2e-code-quality.github.io/m2e-code-quality-p2-site/snapshot/"/>
     <repository
